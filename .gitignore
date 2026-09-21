@@ -1,0 +1,63 @@
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+
+# =========================
+# Python virtual environments
+# =========================
+venv/
+venv312/
+.venv/
+V1/venv/
+V1/venv312/
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*$py.class
+
+# =========================
+# Local ML models
+# =========================
+models/
+V1/models/
+
+# =========================
+# Generated RAG outputs
+# =========================
+V1/output_1_09_final/
+V1/output_chunks_16_09_v3/
+V1/pdfs_ingest_1_09_final/
+
+# =========================
+# Local databases
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# =========================
+# Generated evaluation outputs
+# =========================
+V1/response_generated.json
+V1/gemini_response_generated.json
+
+V1/agent_router_test_output.json
+V1/agent_router_test_output.xlsx
+
+V1/agent_router_answer_eval_v2.json
+V1/agent_router_answer_eval_v2.xlsx
+
+V1/agentrouter_answer_eval.json
+V1/agentrouter_answer_eval.xlsx
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db

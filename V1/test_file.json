@@ -1,0 +1,2402 @@
+[
+    {
+        "question": "To whom must a bank forward a de-listing request received from an individual/entity, according to the MHA instruction cited?",
+        "ground_truth": "Electronically to the Joint Secretary (CTCR), Ministry of Home Affairs (MHA), for consideration.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/236 | Source Reference: Paragraph 7; lines 40-42 | Expected Citation: RBI/2026-27/236, Paragraph 7; lines 40-42",
+        "difficulty": "Procedure"
+    },
+    {
+        "question": "True or false: full device restrictions may become effective once a loan is 30 days past due.",
+        "ground_truth": "False. The first restriction threshold is 30 days past due, but the full set may be effective only after 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: recovery agents may contact borrowers at any hour if the loan is overdue.",
+        "ground_truth": "False. Ordinary contact is limited to 08:00–19:00; outside that period requires an express request or authorisation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: device-locking technology may access contacts and location history for recovery.",
+        "ground_truth": "False. prohibits access or use of such personal data for loan recovery or any other purpose.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: all advances arising from any NRE deposit are excluded from ANBC.",
+        "ground_truth": "False. The exclusion is limited to advances against qualifying NRE term deposits of three years or more within the specified mobilisation period, subject to the applicable rules.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: all newly created Ladakh districts have different Lead Banks.",
+        "ground_truth": "False. State Bank of India is assigned Lead Bank Responsibility for all five.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: the CRR/SLR exemption window continues through September 30, 2026.",
+        "ground_truth": "False. It changes the end date to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: the temporary deposit-rate relaxation begins on August 31, 2026 rather than June 17, 2026.",
+        "ground_truth": "False. It retains June 17, 2026 as the beginning date and changes the end date to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "True or false: the recovery grievance officer's address is optional in recovery communications.",
+        "ground_truth": "False. requires the name, email address, telephone number and address.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Compare the FCNR(B) tenor condition with the NRE tenor condition for ANBC exclusion.",
+        "ground_truth": "FCNR(B) deposits must have a minimum tenor of three years and maximum of five years; NRE term deposits must have a tenor of three years or more.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3 | Expected Citation: RBI/2026-27/232, Paragraph 3",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "How do the Lead Bank assignments for the five new Ladakh districts compare?",
+        "ground_truth": "All five new districts—Sham, Nubra, Changthang, Zanskar and Drass—are assigned to State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What compensation applies when wrongful restrictions or NBFC-attributable delay in reversal occurs after dues are realized?",
+        "ground_truth": "₹250 per hour until the wrongful action is remedied, subject to a total cap equal to the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6); lines 108-110 | Expected Citation: RBI/2026-27/230, Paragraph 100T(6); lines 108-110",
+        "difficulty": "Application"
+    },
+    {
+        "question": "What must an NBFC do promptly when an agreement with a recovery agency is terminated?",
+        "ground_truth": "Promptly update its website list of recovery agencies and immediately notify borrowers/guarantors assigned to that agency so they do not continue dealing with it or its agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraphs 100K and 100N; lines 82-90 | Expected Citation: RBI/2026-27/230, Paragraphs 100K and 100N; lines 82-90",
+        "difficulty": "Application"
+    },
+    {
+        "question": "A device-financing loan is 25 days past due and the borrower has been served notices. Can technology-based restrictions be initiated?",
+        "ground_truth": "No. says restrictions cannot be initiated until the loan is 30 days past due and the borrower remains unpaid despite notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A recovery agent contacts a borrower at 07:30 without any express request from the borrower. Is this compliant?",
+        "ground_truth": "No. Ordinary contact is permitted only between 08:00 and 19:00; earlier/later contact requires the borrower's or guarantor's express request or authorisation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Can a recovery agent call someone outside the normal window?",
+        "ground_truth": "Only if the borrower or guarantor has expressly requested or authorised contact outside 08:00–19:00 hours.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is a recovery agent?",
+        "ground_truth": "A representative of a recovery agency who is involved in recovery-related activities on behalf of an NBFC at the point of customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B); lines 32-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11B); lines 32-36",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "If an individual is directly engaged by an NBFC under an outsourcing arrangement for recovery or possession activities, which instructions apply?",
+        "ground_truth": "The instructions applicable to both a recovery agency and a recovery agent apply to that individual.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Explanation to paragraph 6(11B); lines 34-36 | Expected Citation: RBI/2026-27/230, Explanation to paragraph 6(11B); lines 34-36",
+        "difficulty": "Application"
+    },
+    {
+        "question": "How much advance notice must a borrower/guarantor receive before the first in-person visit by a recovery agency?",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L; lines 84-86 | Expected Citation: RBI/2026-27/230, Paragraph 100L; lines 84-86",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "When may an NBFC use a technology mechanism to restrict or disable a borrower's mobile-device functionality as a recovery tool?",
+        "ground_truth": "Only to recover dues arising from financing of that device, and only when the conditions in are satisfied.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S; lines 100-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S; lines 100-104",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "Can an NBFC or its third-party provider use personal data stored on a borrower's mobile device for recovery?",
+        "ground_truth": "No. It must not access or use personal data such as contacts, SMS, call logs, photos or location history for loan recovery or any other purpose under any circumstances.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U; lines 114-116 | Expected Citation: RBI/2026-27/230, Paragraph 100U; lines 114-116",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "During what hours may an employee/recovery agent ordinarily contact or visit a borrower/guarantor?",
+        "ground_truth": "Between 08:00 hours and 19:00 hours; earlier or later contact requires the borrower's/guarantor's express request or authorization.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4); lines 120-122 | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4); lines 120-122",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "When may an NBFC use technology to restrict or disable a borrower's mobile-device functionality as a recovery tool?",
+        "ground_truth": "Only to recover loan dues arising from financing of the concerned mobile device, subject to all conditions in",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S | Expected Citation: RBI/2026-27/230, Paragraph 100S",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What visibility must a borrower have over device restrictions?",
+        "ground_truth": "The borrower must be able to see the status of restrictions applied to the mobile device at any point in time.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(4) | Expected Citation: RBI/2026-27/230, Paragraph 100T(4)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What identification must a recovery agent carry during an in-person recovery visit?",
+        "ground_truth": "The recovery agent must display the identity card issued by the recovery agency and carry an authorisation letter and a copy of the notice issued under",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100X | Expected Citation: RBI/2026-27/230, Paragraph 100X",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "With whom may a recovery agent discuss loan-dues and recovery matters?",
+        "ground_truth": "Only with the borrower or guarantor, as applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(1) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(1)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How must a recovery agent interact with a borrower or guarantor?",
+        "ground_truth": "In a civil manner, maintaining decency and decorum during visits.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(2) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(2)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Who may visit a borrower's or guarantor's premises for recovery?",
+        "ground_truth": "Only representatives authorised by the NBFC or recovery agency.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(3) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(3)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Where should a recovery agent ordinarily contact a borrower?",
+        "ground_truth": "At the place of the borrower's or guarantor's choice.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(5) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(5)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "A device-financing loan is 45 days past due. Can the full set of restrictions in the loan agreement be made effective?",
+        "ground_truth": "No. The full set may become effective only after the loan is 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A borrower has paid the device-financing dues. How quickly must applicable device restrictions be reversed?",
+        "ground_truth": "Expeditiously and not later than one hour after realisation of the dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(5) | Expected Citation: RBI/2026-27/230, Paragraph 100T(5)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A borrower does not choose a contact location and then fails to appear at the chosen place twice in succession. Where may the recovery agent contact the borrower?",
+        "ground_truth": "At the borrower's residence or place of business/occupation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(5) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(5)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A borrower asks the recovery agent not to visit at a particular time. What should normally happen?",
+        "ground_truth": "The request to avoid the call/visit at that time should be honoured in normal circumstances.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A recovery agent arrives without an identity card but carries an authorisation letter. Can the agent satisfy the identification requirement?",
+        "ground_truth": "No. requires the recovery agent to display the identity card and also carry the authorisation letter and the notice.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100X | Expected Citation: RBI/2026-27/230, Paragraph 100X",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A borrower is in default, but a says a Section J provision applies mutatis mutandis to normal-course collection. Can that provision apply?",
+        "ground_truth": "Yes, where the provision explicitly specifies such application, it can also apply mutatis mutandis to non-defaulting borrowers.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A recovery agent posts a borrower's personal details on social media to pressure repayment. Is this permitted?",
+        "ground_truth": "No. Posting personal details on social media is expressly treated as a harsh recovery practice.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A lender compensates a borrower ₹500 per hour for wrongful device restriction. Is the prescribed hourly rate correct?",
+        "ground_truth": "No. The prescribed rate is ₹250 per hour.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A recovery agent discusses the borrower's dues with a neighbour. Is this permitted?",
+        "ground_truth": "No. Recovery matters should be discussed only with the borrower or guarantor, as applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A recovery agent uses threatening or anonymous calls to recover dues. Is this permitted?",
+        "ground_truth": "No. Threatening or anonymous calls are expressly treated as harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A recovery agent visits a borrower's premises during a family bereavement. Is this appropriate?",
+        "ground_truth": "No. Bereavement is an inappropriate occasion for recovery calls or visits.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What are the permitted hours for a recovery agent to ring the borrower?",
+        "ground_truth": "08:00 to 19:00 hours, unless the borrower/guarantor expressly requests or authorises contact outside those hours.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "How is a recovery agent defined in the RBI recovery framework?",
+        "ground_truth": "A representative of a recovery agency who is involved in recovery-related activities on behalf of an NBFC at the point of customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B) | Expected Citation: RBI/2026-27/230, Paragraph 6(11B)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Who is considered a recovery agent at the customer interface?",
+        "ground_truth": "A representative of a recovery agency who is involved in recovery-related activities on behalf of an NBFC at the point of customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B); lines 32-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11B); lines 32-36",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "How much advance notice must a borrower receive before the first in-person recovery-agency visit?",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L; lines 140-142 | Expected Citation: RBI/2026-27/230, Paragraph 100L; lines 140-142",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "May an NBFC or its technology service provider use personal data from a borrower's mobile device for recovery?",
+        "ground_truth": "No. They must not access or use personal data such as contacts, SMS, call logs, photos or location history for loan recovery or any other purpose.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U; lines 122-124 | Expected Citation: RBI/2026-27/230, Paragraph 100U; lines 122-124",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Could you explain what is a recovery agent?",
+        "ground_truth": "A representative of a recovery agency who is involved in recovery-related activities on behalf of an NBFC at the point of customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B); lines 32-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11B); lines 32-36",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "What does the RBI framework require when If an individual is directly engaged by an NBFC under an outsourcing arrangement for recovery or possession activities, which instructions apply?",
+        "ground_truth": "The instructions applicable to both a recovery agency and a recovery agent apply to that individual.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Explanation to paragraph 6(11B); lines 34-36 | Expected Citation: RBI/2026-27/230, Explanation to paragraph 6(11B); lines 34-36",
+        "difficulty": "Application"
+    },
+    {
+        "question": "What does the RBI framework require when What must an NBFC do promptly when an agreement with a recovery agency is terminated?",
+        "ground_truth": "Promptly update its website list of recovery agencies and immediately notify borrowers/guarantors assigned to that agency so they do not continue dealing with it or its agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraphs 100K and 100N; lines 82-90 | Expected Citation: RBI/2026-27/230, Paragraphs 100K and 100N; lines 82-90",
+        "difficulty": "Application"
+    },
+    {
+        "question": "What is the required approach for much advance notice must a borrower/guarantor receive before the first in-person visit by a recovery agency?",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L; lines 84-86 | Expected Citation: RBI/2026-27/230, Paragraph 100L; lines 84-86",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "At what point may an NBFC use a technology mechanism to restrict or disable a borrower's mobile-device functionality as a recovery tool?",
+        "ground_truth": "Only to recover dues arising from financing of that device, and only when the conditions in are satisfied.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S; lines 100-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S; lines 100-104",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "What does the RBI framework require when What compensation applies when wrongful restrictions or NBFC-attributable delay in reversal occurs after dues are realized?",
+        "ground_truth": "₹250 per hour until the wrongful action is remedied, subject to a total cap equal to the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6); lines 108-110 | Expected Citation: RBI/2026-27/230, Paragraph 100T(6); lines 108-110",
+        "difficulty": "Application"
+    },
+    {
+        "question": "Is it permissible when an nbfc or its third-party provider use personal data stored on a borrower's mobile device for recovery?",
+        "ground_truth": "No. It must not access or use personal data such as contacts, SMS, call logs, photos or location history for loan recovery or any other purpose under any circumstances.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U; lines 114-116 | Expected Citation: RBI/2026-27/230, Paragraph 100U; lines 114-116",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "Does Section J override statutory rights or obligations relating to enforcement of security?",
+        "ground_truth": "No. It is without prejudice to statutory rights available to an NBFC and/or obligations relating to enforcement of security, as well as specific recovery actions such as one-time settlement in other relevant Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100B; lines 48-50 | Expected Citation: RBI/2026-27/230, Paragraph 100B; lines 48-50",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "To what recovery situations does the new recovery framework apply?",
+        "ground_truth": "Recovery of loan dues by an NBFC from borrowers in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A; lines 44-48 | Expected Citation: RBI/2026-27/230, Paragraph 100A; lines 44-48",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "Did the Ladakh update change the Lead Banks of the other existing districts?",
+        "ground_truth": "No. There is no change in the Lead Banks of the other districts in the UT of Ladakh.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Paragraph 2; lines 32-32 | Expected Citation: RBI/2026-27/233, Paragraph 2; lines 32-32",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What role is attributed to Abubakar Swalleh in the sanctions-list update?",
+        "ground_truth": "He provides financial, material or technological support, or financial/other services, to or in support of ISIL, and acted as an ISIL facilitator providing financial and logistic support including recruitment in East and Southern Africa since 2018.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDi.436; lines 34-34 | Expected Citation: RBI/2026-27/235, Entry QDi.436; lines 34-34",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "Which temporary deposit-rate relaxation period was shortened?",
+        "ground_truth": "The period for the temporary FCNR(B) interest-rate ceiling withdrawal and NRE interest-rate restriction was shortened from ending September 30, 2026 to ending August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/243, Paragraph 1; lines 18-24",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "When may the Section J provisions also apply to borrowers who are not in default?",
+        "ground_truth": "Where the Directions explicitly specify that the provisions apply mutatis mutandis to collection of dues in the normal course.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A proviso; lines 46-48 | Expected Citation: RBI/2026-27/230, Paragraph 100A proviso; lines 46-48",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What must the policy provide for cases involving financial distress?",
+        "ground_truth": "A structured framework including documented pre-escalation engagement and guidance regarding available resolution options.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D; lines 54-58 | Expected Citation: RBI/2026-27/230, Paragraph 100D; lines 54-58",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What must recovery targets or incentive structures avoid?",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q; lines 96-98 | Expected Citation: RBI/2026-27/230, Paragraph 100Q; lines 96-98",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What regulatory framework is revised for IDF-NBFCs in the Upper Layer?",
+        "ground_truth": "The large exposure framework for Infrastructure Debt Fund-NBFCs (IDF-NBFCs) in the Upper Layer under the NBFC Concentration Risk Management framework.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/237, Paragraph 1; lines 18-20",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "To what recovery situations does the new recovery framework apply in practice?",
+        "ground_truth": "Recovery of loan dues by an NBFC from borrowers in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A; lines 44-48 | Expected Citation: RBI/2026-27/230, Paragraph 100A; lines 44-48",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "At what point may the Section J provisions also apply to borrowers who are not in default?",
+        "ground_truth": "Where the Directions explicitly specify that the provisions apply mutatis mutandis to collection of dues in the normal course.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A proviso; lines 46-48 | Expected Citation: RBI/2026-27/230, Paragraph 100A proviso; lines 46-48",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "Is it the case that section j override statutory rights or obligations relating to enforcement of security?",
+        "ground_truth": "No. It is without prejudice to statutory rights available to an NBFC and/or obligations relating to enforcement of security, as well as specific recovery actions such as one-time settlement in other relevant Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100B; lines 48-50 | Expected Citation: RBI/2026-27/230, Paragraph 100B; lines 48-50",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What does the RBI framework require when What must the policy provide for cases involving financial distress?",
+        "ground_truth": "A structured framework including documented pre-escalation engagement and guidance regarding available resolution options.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D; lines 54-58 | Expected Citation: RBI/2026-27/230, Paragraph 100D; lines 54-58",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "What does the RBI framework require when What must recovery targets or incentive structures avoid?",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q; lines 96-98 | Expected Citation: RBI/2026-27/230, Paragraph 100Q; lines 96-98",
+        "difficulty": "Understanding"
+    },
+    {
+        "question": "To what extent may borrower/guarantor information be disclosed to employees or recovery agencies?",
+        "ground_truth": "Only to the extent required for them to discharge their loan-recovery duties.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100O; lines 90-94 | Expected Citation: RBI/2026-27/230, Paragraph 100O; lines 90-94",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "What is the maximum amount that may be excluded from ANBC for priority-sector target computation?",
+        "ground_truth": "It shall not exceed the fresh FCNR(B)/NRE deposits eligible for exemption from maintenance of CRR/SLR under the amendment.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Note to paragraph 4(i); lines 30-34 | Expected Citation: RBI/2026-27/232, Note to paragraph 4(i); lines 30-34",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "What must a regulated entity ensure regarding accounts of persons/entities appearing on the relevant UNSC lists?",
+        "ground_truth": "It must ensure that it does not have any account in the name of individuals/entities appearing in the lists approved and periodically circulated by the UNSC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Paragraph 1; lines 22-24 | Expected Citation: RBI/2026-27/234, Paragraph 1; lines 22-24",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "To which entities are the large exposure limits applicable under new?",
+        "ground_truth": "The large exposure limits applicable to NBFC-IFC also apply to IDF-NBFCs subject to Upper Layer regulations.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 39A; lines 28-30 | Expected Citation: RBI/2026-27/237, Paragraph 39A; lines 28-30",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "What does the RBI framework require when To what extent may borrower/guarantor information be disclosed to employees or recovery agencies?",
+        "ground_truth": "Only to the extent required for them to discharge their loan-recovery duties.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100O; lines 90-94 | Expected Citation: RBI/2026-27/230, Paragraph 100O; lines 90-94",
+        "difficulty": "Rule"
+    },
+    {
+        "question": "What is a recovery agency?",
+        "ground_truth": "An entity or individual other than the NBFC's own employees, engaged by an NBFC under an outsourcing arrangement to assist in recovery of loan dues from a borrower in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11A); lines 30-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11A); lines 30-36",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "Who are included as 'NBFC employees' for Section J?",
+        "ground_truth": "Employees of an NBFC deployed for recovery of loan dues, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100C; lines 50-54 | Expected Citation: RBI/2026-27/230, Paragraph 100C; lines 50-54",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "Could you explain what is a recovery agency?",
+        "ground_truth": "An entity or individual other than the NBFC's own employees, engaged by an NBFC under an outsourcing arrangement to assist in recovery of loan dues from a borrower in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11A); lines 30-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11A); lines 30-36",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "Which person or entity are included as 'nbfc employees' for section j?",
+        "ground_truth": "Employees of an NBFC deployed for recovery of loan dues, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100C; lines 50-54 | Expected Citation: RBI/2026-27/230, Paragraph 100C; lines 50-54",
+        "difficulty": "Definition"
+    },
+    {
+        "question": "Within how many calendar days must the recovery-agency list be updated after a modification?",
+        "ground_truth": "Within seven calendar days.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K; lines 82-84 | Expected Citation: RBI/2026-27/230, Paragraph 100K; lines 82-84",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "For how long must call records generally be preserved?",
+        "ground_truth": "Six months from the date the call was made; for sub judice cases, until the cases are disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What is the earliest point at which a technology-based device restriction may be initiated?",
+        "ground_truth": "After the associated loan has become 30 days past due and the borrower has not paid the amount due despite being served notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "When may the full set of device restrictions covered by the loan agreement become effective?",
+        "ground_truth": "Only after the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "Before what point may outgoing calls not be restricted?",
+        "ground_truth": "Outgoing calls shall not be restricted before the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "Within what maximum period must device restrictions be reversed after realization of dues?",
+        "ground_truth": "Not later than one hour after realization of the dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(5); lines 106-110 | Expected Citation: RBI/2026-27/230, Paragraph 100T(5); lines 106-110",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What is the qualifying tenor range for fresh FCNR(B) deposits under the ANBC exclusion?",
+        "ground_truth": "A minimum tenor of three years and a maximum tenor of five years.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3(a); lines 22-26 | Expected Citation: RBI/2026-27/232, Paragraph 3(a); lines 22-26",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What is the qualifying tenor for NRE term deposits under the ANBC exclusion?",
+        "ground_truth": "Three years or more.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3(b); lines 24-28 | Expected Citation: RBI/2026-27/232, Paragraph 3(b); lines 24-28",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "How many new districts were formed in the Union Territory of Ladakh under the cited Gazette Notification?",
+        "ground_truth": "Five.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Paragraph 1; lines 20-24 | Expected Citation: RBI/2026-27/233, Paragraph 1; lines 20-24",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "How many sanctions-list entries were amended in the update covering 21 entries?",
+        "ground_truth": "Twenty-one entries.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/236 | Source Reference: Subject/paragraph 2; lines 20-24 | Expected Citation: RBI/2026-27/236, Subject/paragraph 2; lines 20-24",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What temporary CRR/SLR exemption date was changed for commercial banks?",
+        "ground_truth": "The end date was changed from September 30, 2026 to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/238, Paragraph 1; lines 18-24",
+        "difficulty": "Exact change"
+    },
+    {
+        "question": "What is the qualifying tenor range for fresh FCNR(B) deposits under the commercial-bank exemption?",
+        "ground_truth": "Three years minimum and five years maximum.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/238, Paragraph 1; lines 18-20",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "From what date are fresh NRE term deposits of three years or more covered by the stated temporary exemption?",
+        "ground_truth": "June 19, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/238, Paragraph 1; lines 18-20",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "What end date replaces September 30, 2026 for the SFB CRR/SLR exemptions?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/239 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/239, Paragraph 1; lines 18-24",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "What is the revised end date for the temporary CRR/SLR exemptions for RRBs?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/240 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/240, Paragraph 1; lines 18-24",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "What is the revised end date for the temporary CRR/SLR exemptions for Rural Co-operative Banks?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/242 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/242, Paragraph 1; lines 18-24",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "From what date did the temporary FCNR(B) and NRE deposit-rate measures apply?",
+        "ground_truth": "June 17, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/243, Paragraph 1; lines 18-20",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "What FCNR(B) tenor is covered by the temporary withdrawal of the interest-rate ceiling?",
+        "ground_truth": "Fresh FCNR(B) deposits with tenors of 3–5 years.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/243, Paragraph 1; lines 18-20",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What is the revised end date for the temporary deposit-rate relaxation for Local Area Banks?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/245 | Source Reference: Paragraph 1; lines 18-24 | Expected Citation: RBI/2026-27/245, Paragraph 1; lines 18-24",
+        "difficulty": "Exact date"
+    },
+    {
+        "question": "What does the RBI framework require when Within how many calendar days must the recovery-agency list be updated after a modification?",
+        "ground_truth": "Within seven calendar days.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K; lines 82-84 | Expected Citation: RBI/2026-27/230, Paragraph 100K; lines 82-84",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What does the RBI framework require when For how long must call records generally be preserved?",
+        "ground_truth": "Six months from the date the call was made; for sub judice cases, until the cases are disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "Could you explain what is the earliest point at which a technology-based device restriction may be initiated?",
+        "ground_truth": "After the associated loan has become 30 days past due and the borrower has not paid the amount due despite being served notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "At what point may the full set of device restrictions covered by the loan agreement become effective?",
+        "ground_truth": "Only after the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What does the RBI framework require when Before what point may outgoing calls not be restricted?",
+        "ground_truth": "Outgoing calls shall not be restricted before the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3); lines 102-104 | Expected Citation: RBI/2026-27/230, Paragraph 100S(3); lines 102-104",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What does the RBI framework require when Within what maximum period must device restrictions be reversed after realization of dues?",
+        "ground_truth": "Not later than one hour after realization of the dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(5); lines 106-110 | Expected Citation: RBI/2026-27/230, Paragraph 100T(5); lines 106-110",
+        "difficulty": "Exact value"
+    },
+    {
+        "question": "What is the title of the new NBFC recovery framework introduced by the amendment?",
+        "ground_truth": "Conduct of NBFCs in Recovery of Loan Dues and Engagement of Recovery Agencies.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 4(4); lines 42-46 | Expected Citation: RBI/2026-27/230, Paragraph 4(4); lines 42-46",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What framework must an NBFC follow when conducting due diligence on recovery agencies?",
+        "ground_truth": "The Reserve Bank's Reserve Bank of India (Non-Banking Financial Companies – Managing Risks in Outsourcing) Directions, 2025, as amended from time to time.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H; lines 64-70 | Expected Citation: RBI/2026-27/230, Paragraph 100H; lines 64-70",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What precaution should an NBFC take regarding recording recovery calls?",
+        "ground_truth": "It should take reasonable precautions such as informing the borrower/guarantor that the conversation is being recorded.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What six matters must a loan contract cover if an NBFC relies on a possession clause?",
+        "ground_truth": "Notice period; circumstances for waiving notice; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R; lines 98-100 | Expected Citation: RBI/2026-27/230, Paragraph 100R; lines 98-100",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What are four examples of harsh recovery practices?",
+        "ground_truth": "Examples include abusive language; posting borrower information/audio/video on social media; inappropriate messages; excessive or out-of-hours calls/messages; threatening/anonymous calls; intimidation/harassment; violence or threats; and false or misleading representations.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Z; lines 128-134 | Expected Citation: RBI/2026-27/230, Paragraph 100Z; lines 128-134",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which advances are excluded from ANBC calculation under the 2026 PSL amendment?",
+        "ground_truth": "Advances extended in India against fresh FCNR(B) deposits of three to five years and NRE term deposits of three years or more, where the deposits qualify for the stated CRR/SLR exemption.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3; lines 20-27 | Expected Citation: RBI/2026-27/232, Paragraph 3; lines 20-27",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which two regulatory frameworks must be read together to determine the Upper Layer treatment for an IDF-NBFC?",
+        "ground_truth": "The NBFC Undertaking of Financial Services Directions, 2025 and the Commercial Banks Undertaking of Financial Services Directions, 2025.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 39A; lines 28-30 | Expected Citation: RBI/2026-27/237, Paragraph 39A; lines 28-30",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What is the revised end date for the temporary CRR/SLR exemptions for Regional Rural Banks?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/240 | Source Reference: Paragraph 1 and paragraph 5; lines 20-34 | Expected Citation: RBI/2026-27/240, Paragraph 1 and paragraph 5; lines 20-34",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "When do the 2026 recovery-conduct amendment directions come into effect?",
+        "ground_truth": "January 1, 2027.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which district has the working code 02Z.?",
+        "ground_truth": "Sham.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What happens to the call-record retention period when the matter is sub judice?",
+        "ground_truth": "The records are preserved until the case is disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What should the system do when a user asks about a requirement that is not present in the supplied RBI corpus?",
+        "ground_truth": "It should state that the requirement cannot be established from the supplied corpus and should not fabricate an answer.",
+        "ground_truth_reference": "Source Circular: Supplied RBI corpus | Source Reference: Corpus Boundary | Expected Citation: Supplied RBI corpus, Corpus Boundary",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What time can they contact the borrower?",
+        "ground_truth": "If 'they' refers to an NBFC employee/recovery agent under update 230, ordinary contact is 08:00 to 19:00; outside that window requires express request/authorisation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 and related category circulars | Source Reference: Relevant source | Expected Citation: RBI/2026-27/230 and related category circulars, Relevant source",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "State the requirement concerning commencement.",
+        "ground_truth": "January 1, 2027.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "For how long after a call date are recovery-call records normally retained?",
+        "ground_truth": "Six months from the date the call was made.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding first restriction threshold?",
+        "ground_truth": "Not until the associated loan is 30 days past due and the borrower has not paid the amount due despite being served notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What compensation applies when a wrongful device restriction or delayed reversal is attributable to the NBFC?",
+        "ground_truth": "The borrower is compensated at ₹250 per hour until the wrongful action is remedied, with total compensation capped at the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6); lines 116-120 | Expected Citation: RBI/2026-27/230, Paragraph 100T(6); lines 116-120",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "When do the Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026 come into effect?",
+        "ground_truth": "January 1, 2027",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2); lines 22-28 | Expected Citation: RBI/2026-27/230, Paragraph 3(2); lines 22-28",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which NBFCs are excluded from the comprehensive recovery instructions in the 2026 amendment?",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/230, Paragraph 1; lines 18-20",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What new section is inserted after?",
+        "ground_truth": "Section J, titled 'Conduct of NBFCs in Recovery of Loan Dues and Engagement of Recovery Agencies'.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 4(4); lines 42-46 | Expected Citation: RBI/2026-27/230, Paragraph 4(4); lines 42-46",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What must an NBFC's collection/recovery policy cover regarding initiation of recovery?",
+        "ground_truth": "Triggers for initiation of the recovery process and graded actions according to an escalation matrix for loan recovery.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D; lines 54-58 | Expected Citation: RBI/2026-27/230, Paragraph 100D; lines 54-58",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What additional policy areas are required for engagement of recovery agencies?",
+        "ground_truth": "Eligibility and due-diligence criteria, performance evaluation standards, inspection/audit and control mechanisms, and procedures/penal actions for non-compliant recovery agencies or agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E; lines 58-60 | Expected Citation: RBI/2026-27/230, Paragraph 100E; lines 58-60",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the recovery policy need to say about compensation to borrowers/guarantors?",
+        "ground_truth": "It must provide compensation for loss arising from recovery-related actions of the NBFC or recovery agencies that are not consistent with the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100F; lines 60-62 | Expected Citation: RBI/2026-27/230, Paragraph 100F; lines 60-62",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What technology-recovery matters must be incorporated into the NBFC's policy when applicable?",
+        "ground_truth": "Restrictions applied gradually to a financed mobile device in default, notice timelines, and the roles/responsibilities of a third-party service provider where applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100G; lines 62-64 | Expected Citation: RBI/2026-27/230, Paragraph 100G; lines 62-64",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "When must antecedent verification of recovery agents be carried out?",
+        "ground_truth": "At pre-engagement level and subsequently on an ongoing basis at the pre-defined periodicity specified in the NBFC's policy.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H; lines 68-70 | Expected Citation: RBI/2026-27/230, Paragraph 100H; lines 68-70",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What certification must recovery agents obtain to be engaged by a recovery agency?",
+        "ground_truth": "A certificate from the Indian Institute of Banking and Finance (IIBF) after completing the Debt Recovery Agents training programme offered by IIBF or an institute having a tie-up with IIBF.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I; lines 70-72 | Expected Citation: RBI/2026-27/230, Paragraph 100I; lines 70-72",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "By when must already-engaged recovery agents without the required certificate obtain it?",
+        "ground_truth": "Within one year from the effective date of the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I; lines 70-72 | Expected Citation: RBI/2026-27/230, Paragraph 100I; lines 70-72",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What must an NBFC do regarding a code of conduct for recovery agents and its employees?",
+        "ground_truth": "It must put in place a code of conduct based on the Directions; where a recovery agency is engaged, the NBFC must obtain an undertaking that its recovery agents agree to abide by the code.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100J; lines 74-76 | Expected Citation: RBI/2026-27/230, Paragraph 100J; lines 74-76",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What information must an NBFC publish about its recovery agencies?",
+        "ground_truth": "An up-to-date list containing the agency's name and details such as type, correspondence address, period of engagement, and purpose of engagement (recovery/possession of security).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K; lines 78-84 | Expected Citation: RBI/2026-27/230, Paragraph 100K; lines 78-84",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What must happen if the recovery agency changes during an ongoing recovery process?",
+        "ground_truth": "The NBFC must immediately notify the borrower/guarantor of the change.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100M; lines 86-88 | Expected Citation: RBI/2026-27/230, Paragraph 100M; lines 86-88",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What calls must an NBFC ensure are recorded?",
+        "ground_truth": "Calls made by the employee/recovery agent to the borrower/guarantor and calls made by the borrower/guarantor to the telephone/mobile number conveyed by the NBFC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which device functionalities are expressly deemed essential and must not be restricted/disabled?",
+        "ground_truth": "Access to incoming calls, SMS, and emergency SOS features.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(2); lines 104-108 | Expected Citation: RBI/2026-27/230, Paragraph 100T(2); lines 104-108",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which advances are excluded from ANBC under the 2026 PSL amendment?",
+        "ground_truth": "Advances extended in India against specified incremental fresh FCNR(B) deposits and specified NRE term deposits that qualify for the stated CRR/SLR exemption.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3; lines 22-28 | Expected Citation: RBI/2026-27/232, Paragraph 3; lines 22-28",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What happens to footnote no. 3 of the PSL Directions under this amendment?",
+        "ground_truth": "It is deleted.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 4(ii); lines 36-40 | Expected Citation: RBI/2026-27/232, Paragraph 4(ii); lines 36-40",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Name the five newly created districts in Ladakh.",
+        "ground_truth": "Sham, Nubra, Changthang, Zanskar and Drass.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Paragraph 1; lines 22-30 | Expected Citation: RBI/2026-27/233, Paragraph 1; lines 22-30",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which bank was assigned Lead Bank Responsibility for Sham?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table; lines 24-27 | Expected Citation: RBI/2026-27/233, Table; lines 24-27",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What District Working Code was allotted to Nubra?",
+        "ground_truth": "03B.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table; lines 26-28 | Expected Citation: RBI/2026-27/233, Table; lines 26-28",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What District Working Code was allotted to Changthang?",
+        "ground_truth": "03A.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table; lines 27-29 | Expected Citation: RBI/2026-27/233, Table; lines 27-29",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What District Working Code was allotted to Zanskar?",
+        "ground_truth": "03C.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table; lines 28-30 | Expected Citation: RBI/2026-27/233, Table; lines 28-30",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What District Working Code was allotted to Drass?",
+        "ground_truth": "03D.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table; lines 29-30 | Expected Citation: RBI/2026-27/233, Table; lines 29-30",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What statutory provision is the basis for the regulated-entity obligation discussed?",
+        "ground_truth": "Section 51A of the Unlawful Activities (Prevention) Act, 1967 (UAPA), as amended.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Paragraph 1; lines 20-24 | Expected Citation: RBI/2026-27/234, Paragraph 1; lines 20-24",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which UNSC press release is referenced?",
+        "ground_truth": "SC/16432 dated August 13, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Paragraph 2; lines 24-24 | Expected Citation: RBI/2026-27/234, Paragraph 2; lines 24-24",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which three UNSC resolutions are cited in relation to the ISIL (Da’esh) and Al-Qaida sanctions list?",
+        "ground_truth": "Resolutions 1267 (1999), 1989 (2011) and 2253 (2015).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Paragraph 2; lines 24-24 | Expected Citation: RBI/2026-27/234, Paragraph 2; lines 24-24",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What sanctions measures are mentioned for listed individuals and entities?",
+        "ground_truth": "Asset freeze, travel ban and arms embargo.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Paragraph 2; lines 24-24 | Expected Citation: RBI/2026-27/234, Paragraph 2; lines 24-24",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which entry QDi.001 was amended on August 13, 2026?",
+        "ground_truth": "MOHAMMED SALAHALDIN ABD EL HALIM ZIDANE.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Entry QDi.001; lines 28-32 | Expected Citation: RBI/2026-27/234, Entry QDi.001; lines 28-32",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What is the name of the entity listed as QDe.068?",
+        "ground_truth": "UMMAH TAMEER E-NAU (UTN).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Entry QDe.068; lines 44-48 | Expected Citation: RBI/2026-27/234, Entry QDe.068; lines 44-48",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which UNSC press release is associated with the sanctions-list update concerning four amended entries?",
+        "ground_truth": "SC/16433 dated August 14, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Paragraph 2; lines 22-24 | Expected Citation: RBI/2026-27/235, Paragraph 2; lines 22-24",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What is the listed name of QDi.002?",
+        "ground_truth": "AMIN MUHAMMAD UL HAQ SAAM KHAN.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDi.002; lines 28-30 | Expected Citation: RBI/2026-27/235, Entry QDi.002; lines 28-30",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What other name is given as a good-quality alias for QDi.002?",
+        "ground_truth": "Al-Haq, Amin and Amin, Muhammad are listed as good-quality a.k.a.s.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDi.002; lines 28-30 | Expected Citation: RBI/2026-27/235, Entry QDi.002; lines 28-30",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What is QDi.436's listed name?",
+        "ground_truth": "ABUBAKAR SWALLEH.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDi.436; lines 32-34 | Expected Citation: RBI/2026-27/235, Entry QDi.436; lines 32-34",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What is QDi.439's listed name?",
+        "ground_truth": "HAMIDA NABAGGALA.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDi.439; lines 36-38 | Expected Citation: RBI/2026-27/235, Entry QDi.439; lines 36-38",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which entity is listed as QDe.161?",
+        "ground_truth": "ISLAMIC STATE IN IRAQ AND THE LEVANT - KHORASAN (ISIL-K).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Entry QDe.161; lines 40-42 | Expected Citation: RBI/2026-27/235, Entry QDe.161; lines 40-42",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which UNSC press release is associated with the sanctions-list update covering 21 amended entries?",
+        "ground_truth": "SC/16435 dated August 18, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/236 | Source Reference: Paragraph 2; lines 20-26 | Expected Citation: RBI/2026-27/236, Paragraph 2; lines 20-26",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which category of bank is covered by the Small Finance Bank CRR/SLR amendment?",
+        "ground_truth": "Small Finance Banks.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/239 | Source Reference: Subject; lines 2-16 | Expected Citation: RBI/2026-27/239, Subject; lines 2-16",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which category of bank is covered by the Regional Rural Bank CRR/SLR amendment?",
+        "ground_truth": "Regional Rural Banks.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/240 | Source Reference: Subject; lines 2-16 | Expected Citation: RBI/2026-27/240, Subject; lines 2-16",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which category of bank is covered by the Urban Co-operative Bank CRR/SLR amendment?",
+        "ground_truth": "Urban Co-operative Banks.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/241 | Source Reference: Subject; lines 2-16 | Expected Citation: RBI/2026-27/241, Subject; lines 2-16",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What statutory provision is additionally referenced for UCBs in the powers clause?",
+        "ground_truth": "Section 56 (AACS) of the Banking Regulation Act, 1949, in addition to Sections 18 and 24.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/241 | Source Reference: Paragraph 2; lines 20-22 | Expected Citation: RBI/2026-27/241, Paragraph 2; lines 20-22",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which category of bank is covered by the Rural Co-operative Bank CRR/SLR amendment?",
+        "ground_truth": "Rural Co-operative Banks.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/242 | Source Reference: Subject; lines 2-16 | Expected Citation: RBI/2026-27/242, Subject; lines 2-16",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which institution type is covered by the Local Area Bank deposit-rate amendment?",
+        "ground_truth": "Local Area Banks.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/245 | Source Reference: Subject; lines 2-16 | Expected Citation: RBI/2026-27/245, Subject; lines 2-16",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "Which NBFCs are excluded from the comprehensive recovery instructions?",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1 | Expected Citation: RBI/2026-27/230, Paragraph 1",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "To what recovery activity does Section J apply?",
+        "ground_truth": "Recovery of loan dues by an NBFC from borrowers in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When can Section J also apply to collection of dues from borrowers who are not in default?",
+        "ground_truth": "Only where the relevant provision explicitly specifies that it also applies, mutatis mutandis, to normal-course collection from borrowers who are not in default.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must an NBFC's loan-dues collection/recovery policy cover?",
+        "ground_truth": "It must cover, among other things, triggers for initiating recovery, graded actions under an escalation matrix, a code of conduct for employees and recovery agents, recovery in case of a borrower's demise, and a structured framework for financial-distress cases including documented pre-escalation engagement and guidance on available resolution options.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D | Expected Citation: RBI/2026-27/230, Paragraph 100D",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What should the recovery-agency part of an NBFC policy cover?",
+        "ground_truth": "Eligibility and due-diligence criteria, performance-evaluation standards, inspection/audit and control mechanisms, and procedures or penal actions for non-compliant recovery agencies or their agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E | Expected Citation: RBI/2026-27/230, Paragraph 100E",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What compensation provision must be included in the recovery policy?",
+        "ground_truth": "The policy must include provisions for compensating borrowers or guarantors for losses arising from recovery-related actions of the NBFC or recovery agencies that are inconsistent with the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100F | Expected Citation: RBI/2026-27/230, Paragraph 100F",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What additional matters must an NBFC's recovery policy cover when it uses a technology-based recovery mechanism?",
+        "ground_truth": "It must cover the related technology mechanism, including gradual restrictions on a financed mobile device in default, notice timelines, and the role and responsibilities of a third-party service provider where applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100G | Expected Citation: RBI/2026-27/230, Paragraph 100G",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What due-diligence process is required before engaging recovery agencies?",
+        "ground_truth": "The NBFC must put in place a due-diligence process conforming to the RBI's Managing Risks in Outsourcing Directions, 2025, as amended from time to time, and verify the antecedents of recovery agents before engagement and periodically thereafter.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H | Expected Citation: RBI/2026-27/230, Paragraph 100H",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What certification must recovery agents obtain?",
+        "ground_truth": "They must obtain a certificate from the Indian Institute of Banking and Finance (IIBF) after completing the Debt Recovery Agents training programme offered by IIBF or an institute having a tie-up with IIBF.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must an NBFC do regarding a code of conduct for recovery agents?",
+        "ground_truth": "It must put in place a code of conduct for recovery agents and its own employees and, where a recovery agency is engaged, obtain an undertaking that its recovery agents agree to abide by the code.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100J | Expected Citation: RBI/2026-27/230, Paragraph 100J",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must an NBFC do when its recovery-agency agreement is terminated?",
+        "ground_truth": "It must promptly update the published list.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How much advance notice must be given before the first in-person recovery visit?",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L | Expected Citation: RBI/2026-27/230, Paragraph 100L",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must an NBFC do when a recovery-agency agreement is terminated?",
+        "ground_truth": "It must immediately notify the affected borrowers or guarantors so they do not continue dealing with that agency or its recovery agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100N | Expected Citation: RBI/2026-27/230, Paragraph 100N",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How much borrower or guarantor information may be disclosed to recovery staff?",
+        "ground_truth": "Only the information needed to enable employees or recovery agencies to discharge their loan-recovery duties.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100O | Expected Citation: RBI/2026-27/230, Paragraph 100O",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What call information must an NBFC document?",
+        "ground_truth": "The time and number of calls made by its employee or recovery agent to the borrower or guarantor, along with recordings of the content/text of calls made by the employee/recovery agent and calls made by the borrower/guarantor to the number conveyed by the NBFC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How long must the required call records be preserved?",
+        "ground_truth": "For six months from the date of the call, or, where the case is sub judice, until the case is disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What reasonable precaution is mentioned for recorded recovery calls?",
+        "ground_truth": "The borrower or guarantor should be informed that the conversation is being recorded.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must an NBFC ensure about recovery targets and incentives?",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q | Expected Citation: RBI/2026-27/230, Paragraph 100Q",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must be true of a possession clause relied on for enforcing rights?",
+        "ground_truth": "It must be legally valid and clearly brought to the borrower's notice at the time the loan contract or agreement is executed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What six matters must the loan contract contain when it includes a possession clause?",
+        "ground_truth": "Notice period before possession; circumstances for waiving the notice period; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction of the security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What financing condition must be met before device restrictions can be used?",
+        "ground_truth": "The concerned mobile device must have been financed by the NBFC through a loan.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(1) | Expected Citation: RBI/2026-27/230, Paragraph 100S(1)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must the loan agreement say before device restrictions are permitted?",
+        "ground_truth": "It must expressly and unambiguously permit the action and include the procedure to be followed under the directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(2) | Expected Citation: RBI/2026-27/230, Paragraph 100S(2)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When can technology-based device restrictions first be initiated?",
+        "ground_truth": "Not until the associated loan is 30 days past due and the borrower has not paid the amount due despite being served notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When may the full set of device restrictions become effective?",
+        "ground_truth": "Only after the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When may outgoing calls be restricted on the financed device?",
+        "ground_truth": "Not before the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Who may provide certification for the technology-based device restriction mechanism?",
+        "ground_truth": "The Original Equipment Manufacturer (OEM) of the mobile device and/or the Operating System platform, if such certification is provided.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(4) | Expected Citation: RBI/2026-27/230, Paragraph 100S(4)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Must device restrictions be applied gradually or can the device be disabled immediately?",
+        "ground_truth": "They must be applied gradually; the NBFC must not disable the device ab initio.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(1) | Expected Citation: RBI/2026-27/230, Paragraph 100T(1)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which essential device functionalities must not be restricted?",
+        "ground_truth": "Access to incoming calls, SMS, and emergency SOS features.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(2) | Expected Citation: RBI/2026-27/230, Paragraph 100T(2)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Can device restrictions deny access needed for the borrower's work or employment?",
+        "ground_truth": "No. Restrictions must not result in denial of access to activities related to the borrower's work or employment.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(3) | Expected Citation: RBI/2026-27/230, Paragraph 100T(3)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How quickly must device restrictions be reversed after dues are realised?",
+        "ground_truth": "Expeditiously and not later than one hour after realisation of the dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(5) | Expected Citation: RBI/2026-27/230, Paragraph 100T(5)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What compensation is payable for wrongful device restrictions attributable to the NBFC?",
+        "ground_truth": "₹250 per hour until the wrongful action is remedied, capped in total at the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6) | Expected Citation: RBI/2026-27/230, Paragraph 100T(6)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What must happen to the device-control mechanism after the loan is fully repaid?",
+        "ground_truth": "The NBFC must promptly relinquish access/control or disable the mechanism, as applicable; if the borrower must uninstall it, the NBFC must inform the borrower of the steps.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(7) | Expected Citation: RBI/2026-27/230, Paragraph 100T(7)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Does the borrower retain a right to prepay the loan?",
+        "ground_truth": "Yes. The borrower may prepay the loan partly or fully at any stage.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(8) | Expected Citation: RBI/2026-27/230, Paragraph 100T(8)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What grievance mechanism must an NBFC have for device-unlocking issues?",
+        "ground_truth": "A robust grievance redressal mechanism to resolve borrower grievances regarding delays and issues in unlocking device functionalities.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(9) | Expected Citation: RBI/2026-27/230, Paragraph 100T(9)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Can an NBFC or its third-party device-locking provider access the borrower's personal data for loan recovery?",
+        "ground_truth": "No. They must not access or use personal data such as contacts, SMS, call logs, photos, or location history from the device for loan recovery or any other purpose.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U | Expected Citation: RBI/2026-27/230, Paragraph 100U",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What management structure must an NBFC establish for recovery agencies?",
+        "ground_truth": "A management structure to monitor and control recovery-agency activities and ensure they refrain from actions that could damage the NBFC's integrity and reputation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100V | Expected Citation: RBI/2026-27/230, Paragraph 100V",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What periodic review must an NBFC undertake regarding its recovery-agency mechanism?",
+        "ground_truth": "It must periodically review the mechanism to learn from experience and make improvements.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100W | Expected Citation: RBI/2026-27/230, Paragraph 100W",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What contact information must the recovery agent's authorisation letter include?",
+        "ground_truth": "It must include, among other details, the telephone number of the recovery agency and the NBFC's grievance redressal officer.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100X | Expected Citation: RBI/2026-27/230, Paragraph 100X",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What are the ordinary permitted hours for recovery contact or visits?",
+        "ground_truth": "08:00 hours to 19:00 hours.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When may recovery contact occur outside 08:00 to 19:00 hours?",
+        "ground_truth": "Only when the borrower or guarantor has expressly requested or authorised it.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "From the Ladakh district table, what is the working code for Sham?",
+        "ground_truth": "02Z.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank has Lead Bank Responsibility for Sham?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "From the Ladakh district table, what is the working code for Nubra?",
+        "ground_truth": "03B.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which district has the working code 03B.?",
+        "ground_truth": "Nubra.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which bank has Lead Bank Responsibility for Nubra?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "From the Ladakh district table, what is the working code for Changthang?",
+        "ground_truth": "03A.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which district has the working code 03A.?",
+        "ground_truth": "Changthang.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which bank has Lead Bank Responsibility for Changthang?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "From the Ladakh district table, what is the working code for Zanskar?",
+        "ground_truth": "03C.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which district has the working code 03C.?",
+        "ground_truth": "Zanskar.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which bank has Lead Bank Responsibility for Zanskar?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "From the Ladakh district table, what is the working code for Drass?",
+        "ground_truth": "03D.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which district has the working code 03D.?",
+        "ground_truth": "Drass.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which bank has Lead Bank Responsibility for Drass?",
+        "ground_truth": "State Bank of India.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "List the five newly created Ladakh districts and their District Working Codes.",
+        "ground_truth": "Sham – 02Z; Nubra – 03B; Changthang – 03A; Zanskar – 03C; Drass – 03D.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Do all five newly created Ladakh districts have the same Lead Bank?",
+        "ground_truth": "Yes. State Bank of India is assigned Lead Bank Responsibility for all five.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "A recovery agency changes during an ongoing recovery process. What notification follows?",
+        "ground_truth": "The NBFC must immediately notify the borrower or guarantor of the change.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "An NBFC uses a third-party provider to lock a financed phone. May the provider use the phone's contacts or location history for recovery?",
+        "ground_truth": "No. prohibits accessing or using such personal data for loan recovery or any other purpose.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U | Expected Citation: RBI/2026-27/230, Paragraph 100U",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "An NBFC wants to use device locking for a loan that did not finance the device. Is the mechanism permitted?",
+        "ground_truth": "No. Such technology-based restriction is permitted only to recover dues arising from financing of the concerned device, subject to the stated conditions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S | Expected Citation: RBI/2026-27/230, Paragraph 100S",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "A recovery communication is written by an agent but has no prior NBFC approval. Does it meet?",
+        "ground_truth": "No. Written communication must have prior approval of the NBFC and contain the sender's name and contact details.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(8) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(8)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "An existing recovery agent lacks the IIBF certificate on January 1, 2027. When must the certificate be obtained?",
+        "ground_truth": "Within one year from January 1, 2027, the effective date of the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "An NBFC terminates a recovery agency. Should it merely remove the agency from its website list later, or notify affected borrowers immediately?",
+        "ground_truth": "It must immediately notify affected borrowers/guarantors and promptly update the published list.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering recovery incentives, and what is the resulting requirement?",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q | Expected Citation: RBI/2026-27/230, Paragraph 100Q",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering possession clause, and what is the resulting requirement?",
+        "ground_truth": "It must be legally valid and clearly brought to the borrower's notice at the time the loan contract or agreement is executed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering possession contract contents, and what is the resulting requirement?",
+        "ground_truth": "Notice period before possession; circumstances for waiving the notice period; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction of the security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering scope, and what is the resulting requirement?",
+        "ground_truth": "Only to recover loan dues arising from financing of the concerned mobile device, subject to all conditions in",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S | Expected Citation: RBI/2026-27/230, Paragraph 100S",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering eligibility, and what is the resulting requirement?",
+        "ground_truth": "The concerned mobile device must have been financed by the NBFC through a loan.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(1) | Expected Citation: RBI/2026-27/230, Paragraph 100S(1)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering contract authorisation, and what is the resulting requirement?",
+        "ground_truth": "It must expressly and unambiguously permit the action and include the procedure to be followed under the directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(2) | Expected Citation: RBI/2026-27/230, Paragraph 100S(2)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering first restriction threshold, and what is the resulting requirement?",
+        "ground_truth": "Not until the associated loan is 30 days past due and the borrower has not paid the amount due despite being served notices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering full restriction threshold, and what is the resulting requirement?",
+        "ground_truth": "Only after the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering outgoing calls, and what is the resulting requirement?",
+        "ground_truth": "Not before the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering certification, and what is the resulting requirement?",
+        "ground_truth": "The Original Equipment Manufacturer (OEM) of the mobile device and/or the Operating System platform, if such certification is provided.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(4) | Expected Citation: RBI/2026-27/230, Paragraph 100S(4)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering gradual approach, and what is the resulting requirement?",
+        "ground_truth": "They must be applied gradually; the NBFC must not disable the device ab initio.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(1) | Expected Citation: RBI/2026-27/230, Paragraph 100T(1)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering essential functions, and what is the resulting requirement?",
+        "ground_truth": "Access to incoming calls, SMS, and emergency SOS features.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(2) | Expected Citation: RBI/2026-27/230, Paragraph 100T(2)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering employment access, and what is the resulting requirement?",
+        "ground_truth": "No. Restrictions must not result in denial of access to activities related to the borrower's work or employment.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(3) | Expected Citation: RBI/2026-27/230, Paragraph 100T(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering visibility, and what is the resulting requirement?",
+        "ground_truth": "The borrower must be able to see the status of restrictions applied to the mobile device at any point in time.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(4) | Expected Citation: RBI/2026-27/230, Paragraph 100T(4)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering reversal, and what is the resulting requirement?",
+        "ground_truth": "Expeditiously and not later than one hour after realisation of the dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(5) | Expected Citation: RBI/2026-27/230, Paragraph 100T(5)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering compensation, and what is the resulting requirement?",
+        "ground_truth": "₹250 per hour until the wrongful action is remedied, capped in total at the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6) | Expected Citation: RBI/2026-27/230, Paragraph 100T(6)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering full repayment, and what is the resulting requirement?",
+        "ground_truth": "The NBFC must promptly relinquish access/control or disable the mechanism, as applicable; if the borrower must uninstall it, the NBFC must inform the borrower of the steps.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(7) | Expected Citation: RBI/2026-27/230, Paragraph 100T(7)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering prepayment, and what is the resulting requirement?",
+        "ground_truth": "Yes. The borrower may prepay the loan partly or fully at any stage.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(8) | Expected Citation: RBI/2026-27/230, Paragraph 100T(8)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering grievance redressal, and what is the resulting requirement?",
+        "ground_truth": "A robust grievance redressal mechanism to resolve borrower grievances regarding delays and issues in unlocking device functionalities.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(9) | Expected Citation: RBI/2026-27/230, Paragraph 100T(9)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering personal data, and what is the resulting requirement?",
+        "ground_truth": "No. They must not access or use personal data such as contacts, SMS, call logs, photos, or location history from the device for loan recovery or any other purpose.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100U | Expected Citation: RBI/2026-27/230, Paragraph 100U",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering monitoring, and what is the resulting requirement?",
+        "ground_truth": "A management structure to monitor and control recovery-agency activities and ensure they refrain from actions that could damage the NBFC's integrity and reputation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100V | Expected Citation: RBI/2026-27/230, Paragraph 100V",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering periodic review, and what is the resulting requirement?",
+        "ground_truth": "It must periodically review the mechanism to learn from experience and make improvements.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100W | Expected Citation: RBI/2026-27/230, Paragraph 100W",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering identity documents, and what is the resulting requirement?",
+        "ground_truth": "The recovery agent must display the identity card issued by the recovery agency and carry an authorisation letter and a copy of the notice issued under",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100X | Expected Citation: RBI/2026-27/230, Paragraph 100X",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering authorisation letter, and what is the resulting requirement?",
+        "ground_truth": "It must include, among other details, the telephone number of the recovery agency and the NBFC's grievance redressal officer.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100X | Expected Citation: RBI/2026-27/230, Paragraph 100X",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering discussion scope, and what is the resulting requirement?",
+        "ground_truth": "Only with the borrower or guarantor, as applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(1) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(1)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering decency, and what is the resulting requirement?",
+        "ground_truth": "In a civil manner, maintaining decency and decorum during visits.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(2) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(2)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering authorised representatives, and what is the resulting requirement?",
+        "ground_truth": "Only representatives authorised by the NBFC or recovery agency.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(3) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering contact hours, and what is the resulting requirement?",
+        "ground_truth": "08:00 hours to 19:00 hours.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering outside-hours exception, and what is the resulting requirement?",
+        "ground_truth": "Only when the borrower or guarantor has expressly requested or authorised it.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Which rule applies when considering place of contact, and what is the resulting requirement?",
+        "ground_truth": "At the place of the borrower's or guarantor's choice.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(5) | Expected Citation: RBI/2026-27/230, Paragraph 100Y(5)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "An NBFC restricts incoming calls on a financed device after default. Is this allowed?",
+        "ground_truth": "No. Incoming calls are an essential functionality that must not be restricted.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "An NBFC reverses device restrictions two hours after dues are realised, when the delay is attributable to the NBFC. Is the timing compliant?",
+        "ground_truth": "No. Restrictions must be reversed no later than one hour after realisation of dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A lender pays compensation exceeding the amount of the loan disbursed for wrongful device restriction. Is that consistent with the cap?",
+        "ground_truth": "No. Total compensation is capped at the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "A recovery agency's list on the NBFC website is not updated for ten calendar days after a modification. Does it meet the seven-day requirement?",
+        "ground_truth": "No. The list must be updated within seven calendar days of a modification.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "An NBFC's practice conflicts with the requirement described What is the regulatory requirement?",
+        "ground_truth": "Eligibility and due-diligence criteria, performance-evaluation standards, inspection/audit and control mechanisms, and procedures or penal actions for non-compliant recovery agencies or their agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E | Expected Citation: RBI/2026-27/230, Paragraph 100E",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which date was replaced by August 31, 2026?",
+        "ground_truth": "September 30, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Paragraph 1/5 | Expected Citation: RBI/2026-27/238, Paragraph 1/5",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When do the amended recovery-conduct directions come into effect?",
+        "ground_truth": "January 1, 2027.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When did the priority-sector lending amendment become effective?",
+        "ground_truth": "With immediate effect.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3 | Expected Citation: RBI/2026-27/232, Paragraph 3",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When did the IDF-NBFC concentration-risk amendment become effective?",
+        "ground_truth": "With immediate effect.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 1 | Expected Citation: RBI/2026-27/237, Paragraph 1",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank category is covered by the commercial-bank CRR/SLR amendment?",
+        "ground_truth": "Commercial Banks",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Title | Expected Citation: RBI/2026-27/238, Title",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank category is covered by the Small Finance Bank CRR/SLR amendment?",
+        "ground_truth": "Small Finance Banks",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/239 | Source Reference: Title | Expected Citation: RBI/2026-27/239, Title",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank category is covered by the Regional Rural Bank CRR/SLR amendment?",
+        "ground_truth": "Regional Rural Banks",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/240 | Source Reference: Title | Expected Citation: RBI/2026-27/240, Title",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank category is covered by the Urban Co-operative Bank CRR/SLR amendment?",
+        "ground_truth": "Urban Co-operative Banks",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/241 | Source Reference: Title | Expected Citation: RBI/2026-27/241, Title",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Which bank category is covered by the Rural Co-operative Bank CRR/SLR amendment?",
+        "ground_truth": "Rural Co-operative Banks",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/242 | Source Reference: Title | Expected Citation: RBI/2026-27/242, Title",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "How do the FCNR(B) and NRE mobilisation windows differ?",
+        "ground_truth": "Eligible FCNR(B) deposits are mobilised between June 8 and September 30, 2026; eligible NRE term deposits are mobilised between June 19 and September 30, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3 | Expected Citation: RBI/2026-27/232, Paragraph 3",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What changed between the earlier and amended end date for the CRR/SLR exemption period?",
+        "ground_truth": "The end date changed from September 30, 2026 to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Paragraph 1/5 | Expected Citation: RBI/2026-27/238, Paragraph 1/5",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "How is the commercial-bank deposit-interest amendment similar to the Local Area Bank amendment?",
+        "ground_truth": "Both amend the temporary relaxation end date from September 30, 2026 to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 and RBI/2026-27/245 | Source Reference: Paragraph 1/5 | Expected Citation: RBI/2026-27/243 and RBI/2026-27/245, Paragraph 1/5",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "How do circulars 234 and 235 differ in their referenced UNSC press releases?",
+        "ground_truth": "update 234 references SC/16432 dated August 13, 2026, while update 235 references SC/16433 dated August 14, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 and RBI/2026-27/235 | Source Reference: Paragraph 2 | Expected Citation: RBI/2026-27/234 and RBI/2026-27/235, Paragraph 2",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "How does the update covering 21 amended entries differ from the two earlier sanctions-list updates in the number of amended entries?",
+        "ground_truth": "update 236 states that 21 entries were amended; circulars 234 and 235 each state amendment of 4 entries.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/236, RBI/2026-27/234, RBI/2026-27/235 | Source Reference: Headings/Paragraph 2 | Expected Citation: RBI/2026-27/236, RBI/2026-27/234, RBI/2026-27/235, Headings/Paragraph 2",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What is the current RBI repo rate?",
+        "ground_truth": "The current repo rate is not provided in the supplied RBI documents.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the GDP growth forecast for India?",
+        "ground_truth": "This information is not available in the supplied update documents.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What are the RBI's rules for cryptocurrency trading?",
+        "ground_truth": "This information is not available in the supplied update documents.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the current USD/INR exchange rate?",
+        "ground_truth": "This information is not available in the supplied update documents.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the legal penalty under a law not mentioned in the supplied circulars?",
+        "ground_truth": "The requested information is not available in the supplied documents.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Can the supplied RBI corpus answer a question about SEBI's latest mutual-fund guidance?",
+        "ground_truth": "This information is outside the supplied update corpus.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What are the banking rules in the United States for recovery agents?",
+        "ground_truth": "This information is outside the supplied RBI/India regulatory corpus.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Is the subject of the requested amendment available in the supplied RBI corpus?",
+        "ground_truth": "update 244 is not present in the supplied documents, so its subject cannot be established from this corpus.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the weather in Mumbai today?",
+        "ground_truth": "This is outside the scope of the supplied update corpus.",
+        "ground_truth_reference": "Source Circular:  | Source Reference:  | Expected Citation: , ",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "Can they lock it after 30 days?",
+        "ground_truth": "If 'they' refers to the NBFC and 'it' refers to a financed mobile device, gradual restrictions may begin only after the loan is 30 days past due and the borrower remains unpaid despite notices; the full set is only after 60 days.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 and related category circulars | Source Reference: Relevant source | Expected Citation: RBI/2026-27/230 and related category circulars, Relevant source",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What is the code for 03A?",
+        "ground_truth": "03A is the District Working Code allotted to Changthang in update 233.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 and related category circulars | Source Reference: Relevant source | Expected Citation: RBI/2026-27/230 and related category circulars, Relevant source",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "When did the change happen?",
+        "ground_truth": "The answer depends on the referenced update. For circulars 238–245, the amendments came into force with immediate effect; update 230's directions come into effect January 1, 2027.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 and related category circulars | Source Reference: Relevant source | Expected Citation: RBI/2026-27/230 and related category circulars, Relevant source",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Does this apply to banks?",
+        "ground_truth": "The answer depends on the specific update. The supplied recovery-conduct amendment is for specified NBFCs, while the CRR/SLR and deposit-interest amendments are category-specific bank directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 and related category circulars | Source Reference: Relevant source | Expected Citation: RBI/2026-27/230 and related category circulars, Relevant source",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "How long do we keep the recovery call recordings?",
+        "ground_truth": "Six months from the date of the call, or until disposal where the case is sub judice.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is the max delay allowed before unlocking the phone after payment?",
+        "ground_truth": "Restrictions must be reversed expeditiously and no later than one hour after realisation of dues.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Who is responsible for the new Ladakh district lead-bank work?",
+        "ground_truth": "State Bank of India has Lead Bank Responsibility for all five newly created districts.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Relevant paragraph | Expected Citation: RBI/2026-27/230, Relevant paragraph",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "When was the recovery-conduct amendment issued?",
+        "ground_truth": "August 6, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Header | Expected Citation: RBI/2026-27/230, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the priority-sector lending amendment issued?",
+        "ground_truth": "August 07, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Header | Expected Citation: RBI/2026-27/232, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Ladakh Lead Bank update issued?",
+        "ground_truth": "August 10, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Header | Expected Citation: RBI/2026-27/233, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the first sanctions-list update covering four amended entries issued?",
+        "ground_truth": "August 18, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/234 | Source Reference: Header | Expected Citation: RBI/2026-27/234, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the second sanctions-list update covering four amended entries issued?",
+        "ground_truth": "August 18, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/235 | Source Reference: Header | Expected Citation: RBI/2026-27/235, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the sanctions-list update covering 21 amended entries issued?",
+        "ground_truth": "August 19, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/236 | Source Reference: Header | Expected Citation: RBI/2026-27/236, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the IDF-NBFC concentration-risk amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Header | Expected Citation: RBI/2026-27/237, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the commercial-bank CRR/SLR amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/238 | Source Reference: Header | Expected Citation: RBI/2026-27/238, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Small Finance Bank CRR/SLR amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/239 | Source Reference: Header | Expected Citation: RBI/2026-27/239, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Regional Rural Bank CRR/SLR amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/240 | Source Reference: Header | Expected Citation: RBI/2026-27/240, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Urban Co-operative Bank CRR/SLR amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/241 | Source Reference: Header | Expected Citation: RBI/2026-27/241, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Rural Co-operative Bank CRR/SLR amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/242 | Source Reference: Header | Expected Citation: RBI/2026-27/242, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Commercial Bank deposit-rate amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Header | Expected Citation: RBI/2026-27/243, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "When was the Local Area Bank deposit-rate amendment issued?",
+        "ground_truth": "August 25, 2026",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/245 | Source Reference: Header | Expected Citation: RBI/2026-27/245, Header",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "State the requirement concerning excluded nbfcs.",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1 | Expected Citation: RBI/2026-27/230, Paragraph 1",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery agency.",
+        "ground_truth": "An entity or individual other than the NBFC's own employees, engaged by an NBFC under an outsourcing arrangement to assist in recovery of loan dues from a borrower in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11A) | Expected Citation: RBI/2026-27/230, Paragraph 6(11A)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery agent.",
+        "ground_truth": "A representative of a recovery agency who is involved in recovery-related activities on behalf of an NBFC at the point of customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B) | Expected Citation: RBI/2026-27/230, Paragraph 6(11B)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement in Explanation to concerning directly engaged individual.",
+        "ground_truth": "The instructions applicable to both a recovery agency and a recovery agent apply to that individual.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Explanation to Paragraph 6(11B) | Expected Citation: RBI/2026-27/230, Explanation to Paragraph 6(11B)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery dues.",
+        "ground_truth": "Recovery of loan dues by an NBFC from borrowers in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning normal-course collection.",
+        "ground_truth": "Only where the relevant provision explicitly specifies that it also applies, mutatis mutandis, to normal-course collection from borrowers who are not in default.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery policy.",
+        "ground_truth": "It must cover, among other things, triggers for initiating recovery, graded actions under an escalation matrix, a code of conduct for employees and recovery agents, recovery in case of a borrower's demise, and a structured framework for financial-distress cases including documented pre-escalation engagement and guidance on available resolution options.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D | Expected Citation: RBI/2026-27/230, Paragraph 100D",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery agency policy.",
+        "ground_truth": "Eligibility and due-diligence criteria, performance-evaluation standards, inspection/audit and control mechanisms, and procedures or penal actions for non-compliant recovery agencies or their agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E | Expected Citation: RBI/2026-27/230, Paragraph 100E",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning compensation policy.",
+        "ground_truth": "The policy must include provisions for compensating borrowers or guarantors for losses arising from recovery-related actions of the NBFC or recovery agencies that are inconsistent with the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100F | Expected Citation: RBI/2026-27/230, Paragraph 100F",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning technology policy.",
+        "ground_truth": "It must cover the related technology mechanism, including gradual restrictions on a financed mobile device in default, notice timelines, and the role and responsibilities of a third-party service provider where applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100G | Expected Citation: RBI/2026-27/230, Paragraph 100G",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning due diligence.",
+        "ground_truth": "The NBFC must put in place a due-diligence process conforming to the RBI's Managing Risks in Outsourcing Directions, 2025, as amended from time to time, and verify the antecedents of recovery agents before engagement and periodically thereafter.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H | Expected Citation: RBI/2026-27/230, Paragraph 100H",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning training.",
+        "ground_truth": "They must obtain a certificate from the Indian Institute of Banking and Finance (IIBF) after completing the Debt Recovery Agents training programme offered by IIBF or an institute having a tie-up with IIBF.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning existing agents.",
+        "ground_truth": "Within one year from the effective date of the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning code of conduct.",
+        "ground_truth": "It must put in place a code of conduct for recovery agents and its own employees and, where a recovery agency is engaged, obtain an undertaking that its recovery agents agree to abide by the code.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100J | Expected Citation: RBI/2026-27/230, Paragraph 100J",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery agency list.",
+        "ground_truth": "An up-to-date list must include the recovery agency's name, type (corporate or individual), correspondence address, period of engagement, and purpose of engagement (recovery or possession of security).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning list update.",
+        "ground_truth": "Within seven calendar days of the modification.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning termination update.",
+        "ground_truth": "It must promptly update the published list.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning first visit notice.",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L | Expected Citation: RBI/2026-27/230, Paragraph 100L",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning agency change.",
+        "ground_truth": "The NBFC must immediately notify the borrower or guarantor of the change.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100M | Expected Citation: RBI/2026-27/230, Paragraph 100M",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning agency termination.",
+        "ground_truth": "It must immediately notify the affected borrowers or guarantors so they do not continue dealing with that agency or its recovery agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100N | Expected Citation: RBI/2026-27/230, Paragraph 100N",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning information minimisation.",
+        "ground_truth": "Only the information needed to enable employees or recovery agencies to discharge their loan-recovery duties.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100O | Expected Citation: RBI/2026-27/230, Paragraph 100O",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning call records.",
+        "ground_truth": "The time and number of calls made by its employee or recovery agent to the borrower or guarantor, along with recordings of the content/text of calls made by the employee/recovery agent and calls made by the borrower/guarantor to the number conveyed by the NBFC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning call-record retention.",
+        "ground_truth": "For six months from the date of the call, or, where the case is sub judice, until the case is disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recording notice.",
+        "ground_truth": "The borrower or guarantor should be informed that the conversation is being recorded.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning recovery incentives.",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q | Expected Citation: RBI/2026-27/230, Paragraph 100Q",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning possession clause.",
+        "ground_truth": "It must be legally valid and clearly brought to the borrower's notice at the time the loan contract or agreement is executed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning possession contract contents.",
+        "ground_truth": "Notice period before possession; circumstances for waiving the notice period; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction of the security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning scope.",
+        "ground_truth": "Only to recover loan dues arising from financing of the concerned mobile device, subject to all conditions in",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S | Expected Citation: RBI/2026-27/230, Paragraph 100S",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "State the requirement concerning eligibility.",
+        "ground_truth": "The concerned mobile device must have been financed by the NBFC through a loan.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(1) | Expected Citation: RBI/2026-27/230, Paragraph 100S(1)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which six NBFC categories are explicitly excluded from the recovery instructions?",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1 | Expected Citation: RBI/2026-27/230, Paragraph 1",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is the maximum tenor for an eligible fresh FCNR(B) deposit under the ANBC exclusion?",
+        "ground_truth": "Five years.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3(a) | Expected Citation: RBI/2026-27/232, Paragraph 3(a)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the minimum tenor for an eligible fresh FCNR(B) deposit under the ANBC exclusion?",
+        "ground_truth": "Three years.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/232 | Source Reference: Paragraph 3(a) | Expected Citation: RBI/2026-27/232, Paragraph 3(a)",
+        "difficulty": "Easy"
+    },
+    {
+        "question": "What is the prescribed compensation cap for wrongful mobile-device restrictions?",
+        "ground_truth": "The total compensation payable is capped at the amount of the loan disbursed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(6) | Expected Citation: RBI/2026-27/230, Paragraph 100T(6)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What three essential mobile-device functions are expressly protected from restriction?",
+        "ground_truth": "Incoming calls, SMS and emergency SOS features.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(2) | Expected Citation: RBI/2026-27/230, Paragraph 100T(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which Ladakh district was assigned the working code 03C?",
+        "ground_truth": "Zanskar.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "Which Ladakh district was assigned the working code 03D?",
+        "ground_truth": "Drass.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Table | Expected Citation: RBI/2026-27/233, Table",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is the requirement regarding commencement?",
+        "ground_truth": "January 1, 2027.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2) | Expected Citation: RBI/2026-27/230, Paragraph 3(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is the requirement regarding excluded nbfcs?",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1 | Expected Citation: RBI/2026-27/230, Paragraph 1",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "How is a recovery agency defined in the RBI recovery framework?",
+        "ground_truth": "An entity or individual other than the NBFC's own employees, engaged by an NBFC under an outsourcing arrangement to assist in recovery of loan dues from a borrower in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11A) | Expected Citation: RBI/2026-27/230, Paragraph 6(11A)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "How is a directly engaged individual defined in the RBI recovery framework?",
+        "ground_truth": "The instructions applicable to both a recovery agency and a recovery agent apply to that individual.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Explanation to Paragraph 6(11B) | Expected Citation: RBI/2026-27/230, Explanation to Paragraph 6(11B)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recovery dues?",
+        "ground_truth": "Recovery of loan dues by an NBFC from borrowers in default, including taking possession of a security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding normal-course collection?",
+        "ground_truth": "Only where the relevant provision explicitly specifies that it also applies, mutatis mutandis, to normal-course collection from borrowers who are not in default.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100A | Expected Citation: RBI/2026-27/230, Paragraph 100A",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recovery policy?",
+        "ground_truth": "It must cover, among other things, triggers for initiating recovery, graded actions under an escalation matrix, a code of conduct for employees and recovery agents, recovery in case of a borrower's demise, and a structured framework for financial-distress cases including documented pre-escalation engagement and guidance on available resolution options.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D | Expected Citation: RBI/2026-27/230, Paragraph 100D",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recovery agency policy?",
+        "ground_truth": "Eligibility and due-diligence criteria, performance-evaluation standards, inspection/audit and control mechanisms, and procedures or penal actions for non-compliant recovery agencies or their agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E | Expected Citation: RBI/2026-27/230, Paragraph 100E",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding compensation policy?",
+        "ground_truth": "The policy must include provisions for compensating borrowers or guarantors for losses arising from recovery-related actions of the NBFC or recovery agencies that are inconsistent with the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100F | Expected Citation: RBI/2026-27/230, Paragraph 100F",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding technology policy?",
+        "ground_truth": "It must cover the related technology mechanism, including gradual restrictions on a financed mobile device in default, notice timelines, and the role and responsibilities of a third-party service provider where applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100G | Expected Citation: RBI/2026-27/230, Paragraph 100G",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding due diligence?",
+        "ground_truth": "The NBFC must put in place a due-diligence process conforming to the RBI's Managing Risks in Outsourcing Directions, 2025, as amended from time to time, and verify the antecedents of recovery agents before engagement and periodically thereafter.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H | Expected Citation: RBI/2026-27/230, Paragraph 100H",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding training?",
+        "ground_truth": "They must obtain a certificate from the Indian Institute of Banking and Finance (IIBF) after completing the Debt Recovery Agents training programme offered by IIBF or an institute having a tie-up with IIBF.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding existing agents?",
+        "ground_truth": "Within one year from the effective date of the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I | Expected Citation: RBI/2026-27/230, Paragraph 100I",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding code of conduct?",
+        "ground_truth": "It must put in place a code of conduct for recovery agents and its own employees and, where a recovery agency is engaged, obtain an undertaking that its recovery agents agree to abide by the code.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100J | Expected Citation: RBI/2026-27/230, Paragraph 100J",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recovery agency list?",
+        "ground_truth": "An up-to-date list must include the recovery agency's name, type (corporate or individual), correspondence address, period of engagement, and purpose of engagement (recovery or possession of security).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding list update?",
+        "ground_truth": "Within seven calendar days of the modification.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding termination update?",
+        "ground_truth": "It must promptly update the published list.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K | Expected Citation: RBI/2026-27/230, Paragraph 100K",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding first visit notice?",
+        "ground_truth": "At least one day before the first visit.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100L | Expected Citation: RBI/2026-27/230, Paragraph 100L",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding agency change?",
+        "ground_truth": "The NBFC must immediately notify the borrower or guarantor of the change.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100M | Expected Citation: RBI/2026-27/230, Paragraph 100M",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding agency termination?",
+        "ground_truth": "It must immediately notify the affected borrowers or guarantors so they do not continue dealing with that agency or its recovery agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100N | Expected Citation: RBI/2026-27/230, Paragraph 100N",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding information minimisation?",
+        "ground_truth": "Only the information needed to enable employees or recovery agencies to discharge their loan-recovery duties.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100O | Expected Citation: RBI/2026-27/230, Paragraph 100O",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding call records?",
+        "ground_truth": "The time and number of calls made by its employee or recovery agent to the borrower or guarantor, along with recordings of the content/text of calls made by the employee/recovery agent and calls made by the borrower/guarantor to the number conveyed by the NBFC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding call-record retention?",
+        "ground_truth": "For six months from the date of the call, or, where the case is sub judice, until the case is disposed of.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recording notice?",
+        "ground_truth": "The borrower or guarantor should be informed that the conversation is being recorded.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P | Expected Citation: RBI/2026-27/230, Paragraph 100P",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding recovery incentives?",
+        "ground_truth": "They must not induce employees or recovery agencies to adopt harsh recovery practices.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Q | Expected Citation: RBI/2026-27/230, Paragraph 100Q",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding possession clause?",
+        "ground_truth": "It must be legally valid and clearly brought to the borrower's notice at the time the loan contract or agreement is executed.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding possession contract contents?",
+        "ground_truth": "Notice period before possession; circumstances for waiving the notice period; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction of the security.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R | Expected Citation: RBI/2026-27/230, Paragraph 100R",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding scope?",
+        "ground_truth": "Only to recover loan dues arising from financing of the concerned mobile device, subject to all conditions in",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S | Expected Citation: RBI/2026-27/230, Paragraph 100S",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding eligibility?",
+        "ground_truth": "The concerned mobile device must have been financed by the NBFC through a loan.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(1) | Expected Citation: RBI/2026-27/230, Paragraph 100S(1)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding contract authorisation?",
+        "ground_truth": "It must expressly and unambiguously permit the action and include the procedure to be followed under the directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(2) | Expected Citation: RBI/2026-27/230, Paragraph 100S(2)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding full restriction threshold?",
+        "ground_truth": "Only after the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding outgoing calls?",
+        "ground_truth": "Not before the loan has become 60 days past due.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(3) | Expected Citation: RBI/2026-27/230, Paragraph 100S(3)",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What does the RBI recovery framework require regarding certification?",
+        "ground_truth": "The Original Equipment Manufacturer (OEM) of the mobile device and/or the Operating System platform, if such certification is provided.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100S(4) | Expected Citation: RBI/2026-27/230, Paragraph 100S(4)",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What is the revised end date for the temporary commercial-bank FCNR(B) and NRE deposit-interest relaxation?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Header/Paragraph 1 | Expected Citation: RBI/2026-27/243, Header/Paragraph 1",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What major change was made to the earlier recovery-agent framework for NBFCs?",
+        "ground_truth": "The earlier recovery-agent provisions were replaced with comprehensive instructions on conduct in recovery of loan dues and engagement of recovery agencies, through a new dedicated recovery framework.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 4(4); lines 40-46 | Expected Citation: RBI/2026-27/230, Paragraph 4(4); lines 40-46",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What large-exposure treatment applies to IDF-NBFCs subject to Upper Layer regulations?",
+        "ground_truth": "The large exposure limits applicable to NBFC-IFCs also apply to IDF-NBFCs that are subject to Upper Layer regulations.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 5(1); lines 26-30 | Expected Citation: RBI/2026-27/237, Paragraph 5(1); lines 26-30",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What is the revised end date for the temporary CRR/SLR exemptions for Small Finance Banks?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/239 | Source Reference: Paragraph 1 and paragraph 5; lines 20-34 | Expected Citation: RBI/2026-27/239, Paragraph 1 and paragraph 5; lines 20-34",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What is the revised end date for the temporary CRR/SLR exemptions for Urban Co-operative Banks?",
+        "ground_truth": "August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/241 | Source Reference: Paragraph 1 and paragraph 5; lines 20-34 | Expected Citation: RBI/2026-27/241, Paragraph 1 and paragraph 5; lines 20-34",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What change was made to the temporary deposit-rate relaxation for Commercial Banks?",
+        "ground_truth": "The end date was changed from September 30, 2026 to August 31, 2026 for the temporary FCNR(B) interest-rate ceiling withdrawal and NRE deposit-interest restriction.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/243 | Source Reference: Paragraph 1 and paragraph 5; lines 20-34 | Expected Citation: RBI/2026-27/243, Paragraph 1 and paragraph 5; lines 20-34",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What change was made to the temporary deposit-rate relaxation for Local Area Banks?",
+        "ground_truth": "The end date was changed from September 30, 2026 to August 31, 2026.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/245 | Source Reference: Paragraph 1 and paragraph 5; lines 20-34 | Expected Citation: RBI/2026-27/245, Paragraph 1 and paragraph 5; lines 20-34",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What term is used for a representative of a recovery agency who performs recovery activities at the customer interface?",
+        "ground_truth": "Recovery agent.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 6(11B); lines 30-36 | Expected Citation: RBI/2026-27/230, Paragraph 6(11B); lines 30-36",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What are the ordinary contact hours for recovery-related calls or visits?",
+        "ground_truth": "08:00 hours to 19:00 hours; earlier or later contact requires the borrower or guarantor's express request or authorisation.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Y(4); lines 150-154 | Expected Citation: RBI/2026-27/230, Paragraph 100Y(4); lines 150-154",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "What recovery practices are treated as harsh?",
+        "ground_truth": "Examples include abusive language, posting personal details or recordings on social media, inappropriate messages, excessive or out-of-hours calls or messages, threatening or anonymous calls, intimidation or harassment, violence or threats, and false or misleading representations.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100Z; lines 158-170 | Expected Citation: RBI/2026-27/230, Paragraph 100Z; lines 158-170",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What grievance mechanism must an NBFC maintain for recovery-related complaints?",
+        "ground_truth": "A dedicated mechanism for redressal of recovery-related grievances, with the relevant grievance redressal officer's name, email address, telephone number and address included in recovery-related communications.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100AA; lines 174-178 | Expected Citation: RBI/2026-27/230, Paragraph 100AA; lines 174-178",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "What large-exposure treatment applies to IDF-NBFCs in the Upper Layer?",
+        "ground_truth": "The large exposure limits applicable to NBFC-IFCs also apply to IDF-NBFCs that are subject to Upper Layer regulations.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/237 | Source Reference: Paragraph 39A; lines 28-30 | Expected Citation: RBI/2026-27/237, Paragraph 39A; lines 28-30",
+        "difficulty": "Hard"
+    },
+    {
+        "question": "Did the Ladakh update change the Lead Banks of the other existing districts in practice?",
+        "ground_truth": "No. There is no change in the Lead Banks of the other districts in the UT of Ladakh.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/233 | Source Reference: Paragraph 2; lines 38-38 | Expected Citation: RBI/2026-27/233, Paragraph 2; lines 38-38",
+        "difficulty": "Medium"
+    },
+    {
+        "question": "At what point do the Reserve Bank of India (Non-Banking Financial Companies - Responsible Business Conduct) Third Amendment Directions, 2026 come into effect?",
+        "ground_truth": "January 1, 2027",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 3(2); lines 22-28 | Expected Citation: RBI/2026-27/230, Paragraph 3(2); lines 22-28",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What bfcs are excluded from the comprehensive recovery instructions in the 2026 amendment?",
+        "ground_truth": "Mortgage Guarantee Companies, Core Investment Companies, NBFC-Account Aggregators, Standalone Primary Dealers, Non-Operating Financial Holding Companies, and NBFCs not having any customer interface.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 1; lines 18-20 | Expected Citation: RBI/2026-27/230, Paragraph 1; lines 18-20",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What new section is inserted after?",
+        "ground_truth": "Section J, titled 'Conduct of NBFCs in Recovery of Loan Dues and Engagement of Recovery Agencies'.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 4(4); lines 42-46 | Expected Citation: RBI/2026-27/230, Paragraph 4(4); lines 42-46",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What must an NBFC's collection/recovery policy cover regarding initiation of recovery?",
+        "ground_truth": "Triggers for initiation of the recovery process and graded actions according to an escalation matrix for loan recovery.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100D; lines 54-58 | Expected Citation: RBI/2026-27/230, Paragraph 100D; lines 54-58",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What additional policy areas are required for engagement of recovery agencies?",
+        "ground_truth": "Eligibility and due-diligence criteria, performance evaluation standards, inspection/audit and control mechanisms, and procedures/penal actions for non-compliant recovery agencies or agents.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100E; lines 58-60 | Expected Citation: RBI/2026-27/230, Paragraph 100E; lines 58-60",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What does the recovery policy need to say about compensation to borrowers/guarantors?",
+        "ground_truth": "It must provide compensation for loss arising from recovery-related actions of the NBFC or recovery agencies that are not consistent with the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100F; lines 60-62 | Expected Citation: RBI/2026-27/230, Paragraph 100F; lines 60-62",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What technology-recovery matters must be incorporated into the NBFC's policy when applicable?",
+        "ground_truth": "Restrictions applied gradually to a financed mobile device in default, notice timelines, and the roles/responsibilities of a third-party service provider where applicable.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100G; lines 62-64 | Expected Citation: RBI/2026-27/230, Paragraph 100G; lines 62-64",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What framework must an NBFC follow when conducting due diligence on recovery agencies?",
+        "ground_truth": "The Reserve Bank's Reserve Bank of India (Non-Banking Financial Companies – Managing Risks in Outsourcing) Directions, 2025, as amended from time to time.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H; lines 64-70 | Expected Citation: RBI/2026-27/230, Paragraph 100H; lines 64-70",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "At what point must antecedent verification of recovery agents be carried out?",
+        "ground_truth": "At pre-engagement level and subsequently on an ongoing basis at the pre-defined periodicity specified in the NBFC's policy.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100H; lines 68-70 | Expected Citation: RBI/2026-27/230, Paragraph 100H; lines 68-70",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What certification must recovery agents obtain to be engaged by a recovery agency?",
+        "ground_truth": "A certificate from the Indian Institute of Banking and Finance (IIBF) after completing the Debt Recovery Agents training programme offered by IIBF or an institute having a tie-up with IIBF.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I; lines 70-72 | Expected Citation: RBI/2026-27/230, Paragraph 100I; lines 70-72",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when By when must already-engaged recovery agents without the required certificate obtain it?",
+        "ground_truth": "Within one year from the effective date of the Directions.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100I; lines 70-72 | Expected Citation: RBI/2026-27/230, Paragraph 100I; lines 70-72",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What must an NBFC do regarding a code of conduct for recovery agents and its employees?",
+        "ground_truth": "It must put in place a code of conduct based on the Directions; where a recovery agency is engaged, the NBFC must obtain an undertaking that its recovery agents agree to abide by the code.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100J; lines 74-76 | Expected Citation: RBI/2026-27/230, Paragraph 100J; lines 74-76",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What information must an NBFC publish about its recovery agencies?",
+        "ground_truth": "An up-to-date list containing the agency's name and details such as type, correspondence address, period of engagement, and purpose of engagement (recovery/possession of security).",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100K; lines 78-84 | Expected Citation: RBI/2026-27/230, Paragraph 100K; lines 78-84",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What must happen if the recovery agency changes during an ongoing recovery process?",
+        "ground_truth": "The NBFC must immediately notify the borrower/guarantor of the change.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100M; lines 86-88 | Expected Citation: RBI/2026-27/230, Paragraph 100M; lines 86-88",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What calls must an NBFC ensure are recorded?",
+        "ground_truth": "Calls made by the employee/recovery agent to the borrower/guarantor and calls made by the borrower/guarantor to the telephone/mobile number conveyed by the NBFC.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What precaution should an NBFC take regarding recording recovery calls?",
+        "ground_truth": "It should take reasonable precautions such as informing the borrower/guarantor that the conversation is being recorded.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100P; lines 94-96 | Expected Citation: RBI/2026-27/230, Paragraph 100P; lines 94-96",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What does the RBI framework require when What six matters must a loan contract cover if an NBFC relies on a possession clause?",
+        "ground_truth": "Notice period; circumstances for waiving notice; procedure for taking possession; final repayment chance before sale/auction; procedure for returning possession; and procedure for sale/auction.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100R; lines 98-100 | Expected Citation: RBI/2026-27/230, Paragraph 100R; lines 98-100",
+        "difficulty": "Recall"
+    },
+    {
+        "question": "What evice functionalities are expressly deemed essential and must not be restricted/disabled?",
+        "ground_truth": "Access to incoming calls, SMS, and emergency SOS features.",
+        "ground_truth_reference": "Source Circular: RBI/2026-27/230 | Source Reference: Paragraph 100T(2); lines 104-108 | Expected Citation: RBI/2026-27/230, Paragraph 100T(2); lines 104-108",
+        "difficulty": "Recall"
+    }
+]

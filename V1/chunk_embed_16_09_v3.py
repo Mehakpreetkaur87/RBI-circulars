@@ -1,0 +1,791 @@
+"""
+Normal text: does not cut words or split a complete sentence unnecessarily; the complete sentence moves to the next chunk.
+Tables: also do not cut words in the middle. 
+Large tables can still be split across chunks, but the split is moved back to a whitespace boundary.
+512 tokens and 100-token overlap remain.
+The rest of the pipeline (Markdown loading, BGE-M3, FAISS, BM25, metadata, validation) is unchanged.
+
+"""
+
+
+import os
+import re
+import json
+import glob
+from pathlib import Path
+
+import time
+
+import numpy as np
+import faiss
+
+from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer
+from rank_bm25 import BM25Okapi
+
+
+# ============================================================
+# CONFIGURATION
+# ============================================================
+
+# Folder containing the FINAL/CANONICAL Markdown files
+MD_FOLDER = "output_1_09_final"
+
+# Output folder
+OUTPUT_DIR = "output_chunks_16_09_v3"
+
+# Output files
+FAISS_INDEX_PATH = os.path.join(OUTPUT_DIR, "rbi_chunks.index")
+CHUNK_META_PATH = os.path.join(OUTPUT_DIR, "rbi_chunk_metadata.json")
+BM25_PATH = os.path.join(OUTPUT_DIR, "bm25_index.json")
+
+# Embedding model
+EMBEDDING_MODEL = "BAAI/bge-m3"
+
+# Chunking parameters
+# These values are now TOKEN-based, not character-based.
+# Example: a chunk can contain up to 512 tokens, and the next chunk
+# repeats the last 100 tokens from the previous chunk to preserve context.
+CHUNK_SIZE_TOKENS = 512
+CHUNK_OVERLAP_TOKENS = 100
+
+# Embedding batch size
+BATCH_SIZE = 16
+
+# Tokenizer used to count tokens while creating chunks.
+# We use the tokenizer associated with the same embedding model so that
+# the chunk size is measured in the token units understood by BGE-M3.
+TOKENIZER = None
+
+
+# ============================================================
+# CREATE OUTPUT DIRECTORY
+# ============================================================
+
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+# ============================================================
+# READ MARKDOWN FILES
+# ============================================================
+
+def load_markdown_files(folder):
+    """
+    Read every .md file from the folder.
+
+    IMPORTANT:
+    The Markdown content is treated as the canonical source.
+    No SQLite/database content is used.
+    No LLM rewriting/summarization is performed.
+    """
+
+    md_files = sorted(glob.glob(os.path.join(folder, "**", "*.md"), recursive=True))
+
+    if not md_files:
+        raise FileNotFoundError(f"No .md files found in: {folder}")
+
+    documents = []
+
+    print("=" * 70)
+    print("MARKDOWN FILES")
+    print("=" * 70)
+
+    for file_path in md_files:
+        with open(file_path, "r", encoding="utf-8") as f:
+            text = f.read()
+
+        # Remove only leading/trailing whitespace.
+        # The actual document content is NOT rewritten.
+        text = text.strip()
+
+        if not text:
+            print(f"SKIPPED EMPTY: {file_path}")
+            continue
+
+        documents.append({
+            "source_file": os.path.relpath(file_path, folder),
+            "full_text": text
+        })
+
+        print(f"Loaded: {os.path.relpath(file_path, folder)} ({len(text):,} characters)")
+
+    print()
+    print(f"Total Markdown files: {len(documents)}")
+
+    return documents
+
+
+# ============================================================
+# SENTENCE SPLITTING
+# ============================================================
+
+def split_sentences(text):
+    """
+    Basic sentence-aware splitting.
+
+    Markdown structure is retained.
+    This is deliberately simple so that the original
+    document text is not rewritten.
+    """
+
+    # First split by blank lines so that paragraphs,
+    # headings and Markdown tables remain grouped.
+    blocks = re.split(r"\n\s*\n", text)
+
+    sentences = []
+
+    for block in blocks:
+        block = block.strip()
+
+        if not block:
+            continue
+
+        # Keep Markdown tables together.
+        if "\n|" in block or block.startswith("|"):
+            sentences.append(block)
+            continue
+
+        # Keep headings as independent units.
+        if block.startswith("#"):
+            sentences.append(block)
+            continue
+
+        # Split normal prose into sentences.
+        parts = re.split(r"(?<=[.!?])\s+", block)
+
+        for part in parts:
+            part = part.strip()
+
+            if part:
+                sentences.append(part)
+
+    return sentences
+
+
+# ============================================================
+# TOKENIZER / TOKEN COUNTING HELPERS
+# ============================================================
+
+
+def load_tokenizer(model_name):
+    """
+    Load the tokenizer associated with the embedding model.
+
+    The tokenizer converts text into tokens. We use it only for chunk-size
+    calculation; the actual embeddings are still generated by SentenceTransformer.
+    """
+    global TOKENIZER
+
+    if TOKENIZER is None:
+        print(f"Loading tokenizer: {model_name}")
+        TOKENIZER = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+
+    return TOKENIZER
+
+
+def token_count(text):
+    """
+    Return the number of tokens in a piece of text.
+
+    Special tokens are excluded because they should not count toward the
+    document chunk budget.
+    """
+    tokenizer = load_tokenizer(EMBEDDING_MODEL)
+    return len(tokenizer.encode(text, add_special_tokens=False))
+
+
+def last_n_tokens_as_text(text, n_tokens):
+    """
+    Return approximately the last n_tokens of `text` while preserving the
+    original characters as much as possible.
+
+    A fast tokenizer provides character offsets for each token. We use those
+    offsets to find where the last n tokens begin, then slice the original
+    string instead of decoding token IDs back into text.
+    """
+    if n_tokens <= 0 or not text.strip():
+        return ""
+
+    tokenizer = load_tokenizer(EMBEDDING_MODEL)
+
+    encoded = tokenizer(
+        text,
+        add_special_tokens=False,
+        return_offsets_mapping=True,
+        truncation=False,
+    )
+
+    offsets = encoded.get("offset_mapping", [])
+    if not offsets:
+        return text.strip()
+
+    # If the requested overlap is larger than the text, keep the whole text.
+    if len(offsets) <= n_tokens:
+        return text.strip()
+
+    start_char = offsets[-n_tokens][0]
+    return text[start_char:].strip()
+
+
+# ============================================================
+# CHUNK DOCUMENT - TOKEN BASED
+# ============================================================
+
+def text_first_n_tokens(text, n_tokens):
+    """
+    Return the first n_tokens of text using tokenizer character offsets.
+
+    The helper returns both the text and the character position where those
+    tokens end. The character position is used to continue from the exact
+    original source text without skipping or duplicating characters.
+    """
+    if n_tokens <= 0 or not text.strip():
+        return "", 0
+
+    tokenizer = load_tokenizer(EMBEDDING_MODEL)
+    encoded = tokenizer(
+        text,
+        add_special_tokens=False,
+        return_offsets_mapping=True,
+        truncation=False,
+    )
+    offsets = encoded.get("offset_mapping", [])
+
+    if not offsets:
+        return text.strip(), len(text)
+
+    if len(offsets) <= n_tokens:
+        return text.strip(), len(text)
+
+    end_char = offsets[n_tokens - 1][1]
+    return text[:end_char].strip(), end_char
+
+
+def split_text_by_token_limit(text, chunk_size_tokens, overlap_tokens):
+    """
+    Split one oversized text unit into token-limited pieces.
+
+    This is the fallback for a single paragraph/table/sentence that is itself
+    larger than the configured chunk size. The split is made using tokenizer
+    offsets, so we still slice the original text instead of decoding token IDs.
+    """
+    pieces = []
+    remaining = text.strip()
+
+    while remaining:
+        remaining_count = token_count(remaining)
+
+        if remaining_count <= chunk_size_tokens:
+            pieces.append(remaining)
+            break
+
+        piece, end_char = text_first_n_tokens(remaining, chunk_size_tokens)
+        if not piece or end_char <= 0:
+            break
+
+        pieces.append(piece)
+
+        # Move forward by the non-overlapping part while retaining overlap.
+        piece_count = token_count(piece)
+        rest = remaining[end_char:].lstrip()
+
+        if not rest:
+            next_remaining = ""
+        elif piece_count <= overlap_tokens:
+            # Safety guard: otherwise the remaining text would not shrink.
+            next_remaining = rest
+        else:
+            overlap_text = last_n_tokens_as_text(piece, overlap_tokens)
+            # Remove the complete piece from the remaining text, then put the
+            # overlap back at the front of the remaining text.
+            next_remaining = (overlap_text + " " + rest).strip()
+
+        if next_remaining == remaining:
+            raise RuntimeError("Token chunking failed to make progress.")
+
+        remaining = next_remaining
+
+    return pieces
+
+
+
+def split_text_by_token_limit_word_safe(text, chunk_size_tokens, overlap_tokens):
+    """
+    Split an oversized unit into token-limited pieces without cutting through
+    a human-readable word.
+
+    The tokenizer finds the approximate token boundary, then the boundary is
+    moved backward to the nearest whitespace. A large table can therefore be
+    split across chunks, but a word will not be cut in the middle.
+
+    Row/header-aware table splitting is intentionally not added here.
+    """
+    pieces = []
+    remaining = text.strip()
+
+    while remaining:
+        remaining_count = token_count(remaining)
+
+        if remaining_count <= chunk_size_tokens:
+            pieces.append(remaining)
+            break
+
+        tokenizer = load_tokenizer(EMBEDDING_MODEL)
+        encoded = tokenizer(
+            remaining,
+            add_special_tokens=False,
+            return_offsets_mapping=True,
+            truncation=False,
+        )
+        offsets = encoded.get("offset_mapping", [])
+
+        if not offsets:
+            pieces.append(remaining)
+            break
+
+        boundary_index = min(chunk_size_tokens - 1, len(offsets) - 1)
+        end_char = offsets[boundary_index][1]
+
+        # Move the boundary backward until it is at whitespace.
+        while end_char > 0 and not remaining[end_char - 1].isspace():
+            end_char -= 1
+
+        # Safety fallback if no whitespace exists before the boundary.
+        if end_char <= 0:
+            end_char = offsets[boundary_index][1]
+
+        piece = remaining[:end_char].strip()
+        if not piece:
+            break
+
+        pieces.append(piece)
+        rest = remaining[end_char:].lstrip()
+
+        if not rest:
+            break
+
+        if overlap_tokens > 0:
+            overlap_text = safe_overlap_text(piece)
+            next_remaining = (
+                (overlap_text + " " + rest).strip()
+                if overlap_text
+                else rest
+            )
+        else:
+            next_remaining = rest
+
+        if next_remaining == remaining:
+            raise RuntimeError(
+                "Word-safe token chunking failed to make progress."
+            )
+
+        remaining = next_remaining
+
+    return pieces
+
+
+def chunk_document(
+    text,
+    chunk_size_tokens=CHUNK_SIZE_TOKENS,
+    overlap_tokens=CHUNK_OVERLAP_TOKENS,
+):
+    """
+    Create sentence-aware, token-based, overlapping chunks.
+
+    Normal text behaviour:
+    - Build chunks from complete logical units/sentences.
+    - Do NOT cut a normal sentence in the middle.
+    - Do NOT cut a word in the middle.
+    - If adding the next complete sentence would exceed the token limit,
+      save the current chunk and start the next chunk with the complete sentence.
+    - Therefore, a normal-text chunk can be slightly larger than 512 tokens
+      when necessary to preserve sentence boundaries.
+
+    Table behaviour:
+    - Markdown tables are initially kept as one logical unit.
+    - If a table is larger than the configured chunk size, the existing
+      token-offset fallback is used.
+    - Table-specific row/header-aware splitting is not introduced here.
+
+    Overlap:
+    - The last `overlap_tokens` from the previous chunk are carried into the
+      next chunk.
+    - For normal text, overlap is adjusted to a whitespace boundary so a word
+      is not cut at the overlap boundary.
+    """
+    if chunk_size_tokens <= 0:
+        raise ValueError("chunk_size_tokens must be greater than 0")
+    if overlap_tokens < 0:
+        raise ValueError("overlap_tokens cannot be negative")
+    if overlap_tokens >= chunk_size_tokens:
+        raise ValueError("overlap_tokens must be smaller than chunk_size_tokens")
+
+    load_tokenizer(EMBEDDING_MODEL)
+    units = split_sentences(text)
+
+    table_flags = []
+    for unit in units:
+        stripped = unit.strip()
+        table_flags.append("\n|" in stripped or stripped.startswith("|"))
+
+    chunks = []
+    current = ""
+    current_tokens = 0
+
+    def add_unit(unit):
+        nonlocal current, current_tokens
+        unit_count = token_count(unit)
+        if not current:
+            current = unit
+            current_tokens = unit_count
+        else:
+            current = current + " " + unit
+            current_tokens += unit_count
+
+    def safe_overlap_text(previous_chunk):
+        if not previous_chunk.strip() or overlap_tokens <= 0:
+            return ""
+        tokenizer = load_tokenizer(EMBEDDING_MODEL)
+        encoded = tokenizer(
+            previous_chunk,
+            add_special_tokens=False,
+            return_offsets_mapping=True,
+            truncation=False,
+        )
+        offsets = encoded.get("offset_mapping", [])
+        if not offsets:
+            return ""
+        if len(offsets) <= overlap_tokens:
+            return previous_chunk.strip()
+
+        start_char = offsets[-overlap_tokens][0]
+        while start_char > 0 and not previous_chunk[start_char - 1].isspace():
+            start_char -= 1
+        return previous_chunk[start_char:].strip()
+
+    for unit, is_table in zip(units, table_flags):
+        unit = unit.strip()
+        if not unit:
+            continue
+        unit_count = token_count(unit)
+
+        # Preserve existing behaviour for oversized Markdown tables.
+        if is_table and unit_count > chunk_size_tokens:
+            if current:
+                chunks.append(current.strip())
+                current = ""
+                current_tokens = 0
+
+            oversized_pieces = split_text_by_token_limit_word_safe(
+                unit, chunk_size_tokens, overlap_tokens
+            )
+            if len(oversized_pieces) > 1:
+                chunks.extend(
+                    piece.strip()
+                    for piece in oversized_pieces[:-1]
+                    if piece.strip()
+                )
+            if oversized_pieces:
+                current = oversized_pieces[-1].strip()
+                current_tokens = token_count(current)
+            continue
+
+        # Normal text/headings/non-oversized tables: keep the complete unit.
+        if not current:
+            add_unit(unit)
+            continue
+
+        if current_tokens + unit_count <= chunk_size_tokens:
+            add_unit(unit)
+            continue
+
+        # Save the current chunk and start the next chunk without splitting
+        # the next sentence/unit. This is the requested sentence-safe change.
+        previous_chunk = current.strip()
+        chunks.append(previous_chunk)
+
+        overlap_text = safe_overlap_text(previous_chunk)
+        overlap_count = token_count(overlap_text) if overlap_text else 0
+
+        # Keep overlap only when it fits with the complete next unit.
+        if overlap_text and overlap_count + unit_count <= chunk_size_tokens:
+            current = (overlap_text + " " + unit).strip()
+            current_tokens = overlap_count + unit_count
+        else:
+            # Complete unit is preserved even if this makes the chunk >512 tokens.
+            current = unit
+            current_tokens = unit_count
+
+    if current.strip():
+        chunks.append(current.strip())
+
+    return chunks
+
+
+# ============================================================
+# CREATE ALL CHUNKS
+# ============================================================
+
+def build_chunks(documents):
+    all_chunks = []
+    chunk_id = 0
+
+    print()
+    print("=" * 70)
+    print("CHUNKING")
+    print("=" * 70)
+
+    for doc in documents:
+        source_file = doc["source_file"]
+        text = doc["full_text"]
+
+        chunks = chunk_document(text)
+
+        print(f"{source_file}: {len(chunks)} chunks")
+
+        for chunk_number, chunk_text in enumerate(chunks, start=1):
+            all_chunks.append({
+                "chunk_id": chunk_id,
+                "source_file": source_file,
+                "chunk_number": chunk_number,
+                "chunk_text": chunk_text,
+                # Store both counts so we can inspect chunk size in characters
+                # and in tokens after indexing.
+                "char_count": len(chunk_text),
+                "token_count": token_count(chunk_text)
+            })
+
+            chunk_id += 1
+
+    print()
+    print(f"Total chunks: {len(all_chunks):,}")
+
+    return all_chunks
+
+
+# ============================================================
+# BUILD EMBEDDINGS
+# ============================================================
+
+def build_embeddings(chunks):
+    print()
+    print("=" * 70)
+    print("EMBEDDINGS")
+    print("=" * 70)
+
+    print(f"Loading model: {EMBEDDING_MODEL}")
+
+    model = SentenceTransformer(EMBEDDING_MODEL)
+
+    texts = [chunk["chunk_text"] for chunk in chunks]
+
+    print(f"Generating embeddings for {len(texts):,} chunks...")
+
+    embeddings = model.encode(
+        texts,
+        batch_size=BATCH_SIZE,
+        show_progress_bar=True,
+        convert_to_numpy=True,
+        normalize_embeddings=True
+    )
+
+    embeddings = embeddings.astype(np.float32)
+
+    print(f"Embedding shape: {embeddings.shape}")
+
+    return embeddings
+
+
+# ============================================================
+# BUILD FAISS INDEX
+# ============================================================
+
+def build_faiss_index(embeddings):
+    print()
+    print("=" * 70)
+    print("FAISS INDEX")
+    print("=" * 70)
+
+    dimension = embeddings.shape[1]
+
+    # Because embeddings are normalized,
+    # L2 distance is suitable for similarity search.
+    index = faiss.IndexFlatL2(dimension)
+
+    index.add(embeddings)
+
+    faiss.write_index(index, FAISS_INDEX_PATH)
+
+    print(f"FAISS dimension: {dimension}")
+    print(f"Vectors stored: {index.ntotal:,}")
+    print(f"Saved: {FAISS_INDEX_PATH}")
+
+    return index
+
+
+# ============================================================
+# BUILD BM25 INDEX
+# ============================================================
+
+def tokenize(text):
+    """
+    Simple tokenization for BM25.
+
+    Lowercase is used for keyword matching.
+    """
+
+    return re.findall(r"\b\w+\b", text.lower())
+
+
+def build_bm25_index(chunks):
+    print()
+    print("=" * 70)
+    print("BM25 INDEX")
+    print("=" * 70)
+
+    tokenized_corpus = []
+
+    for chunk in chunks:
+        tokens = tokenize(chunk["chunk_text"])
+        tokenized_corpus.append(tokens)
+
+    # Build BM25 once to validate the corpus.
+    bm25 = BM25Okapi(tokenized_corpus)
+
+    # Store tokenized corpus rather than trying to
+    # serialize the BM25 Python object itself.
+    data = {
+        "tokenized_corpus": tokenized_corpus
+    }
+
+    with open(BM25_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False)
+
+    print(f"BM25 documents: {len(tokenized_corpus):,}")
+    print(f"Saved: {BM25_PATH}")
+
+    return bm25
+
+
+# ============================================================
+# SAVE CHUNK METADATA
+# ============================================================
+
+def save_chunk_metadata(chunks):
+    print()
+    print("=" * 70)
+    print("CHUNK METADATA")
+    print("=" * 70)
+
+    with open(CHUNK_META_PATH, "w", encoding="utf-8") as f:
+        json.dump(chunks, f, ensure_ascii=False, indent=2)
+
+    print(f"Saved: {CHUNK_META_PATH}")
+
+
+# ============================================================
+# VALIDATION
+# ============================================================
+
+def validate_index(chunks, embeddings, index):
+    print()
+    print("=" * 70)
+    print("VALIDATION")
+    print("=" * 70)
+
+    print(f"Markdown documents : {len(set(c['source_file'] for c in chunks)):,}")
+    print(f"Total chunks       : {len(chunks):,}")
+    print(f"Embedding vectors  : {len(embeddings):,}")
+    print(f"FAISS vectors      : {index.ntotal:,}")
+
+    # Ensure every chunk has exactly one vector.
+    assert len(chunks) == len(embeddings)
+    assert index.ntotal == len(chunks)
+
+    # Make sure no empty chunks exist.
+    empty_chunks = [c for c in chunks if not c["chunk_text"].strip()]
+
+    assert not empty_chunks
+
+    print()
+    print("Validation successful.")
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
+def main():
+    start_time = time.time()
+
+    # Validate the chunking configuration before doing any expensive work.
+    if CHUNK_OVERLAP_TOKENS >= CHUNK_SIZE_TOKENS:
+        raise ValueError("CHUNK_OVERLAP_TOKENS must be smaller than CHUNK_SIZE_TOKENS")
+    print()
+    print("=" * 70)
+    print("RBI MARKDOWN → TOKEN CHUNK → EMBEDDING PIPELINE")
+    print("=" * 70)
+
+    # --------------------------------------------------------
+    # 1. READ ONLY MARKDOWN FILES
+    # --------------------------------------------------------
+
+    documents = load_markdown_files(MD_FOLDER)
+
+    # --------------------------------------------------------
+    # 2. CHUNK MARKDOWN CONTENT
+    # --------------------------------------------------------
+
+    chunks = build_chunks(documents)
+
+    # --------------------------------------------------------
+    # 3. CREATE EMBEDDINGS
+    # --------------------------------------------------------
+
+    embeddings = build_embeddings(chunks)
+
+    # --------------------------------------------------------
+    # 4. BUILD FAISS
+    # --------------------------------------------------------
+
+    faiss_index = build_faiss_index(embeddings)
+
+    # --------------------------------------------------------
+    # 5. BUILD BM25
+    # --------------------------------------------------------
+
+    build_bm25_index(chunks)
+
+    # --------------------------------------------------------
+    # 6. SAVE CHUNK METADATA
+    # --------------------------------------------------------
+
+    save_chunk_metadata(chunks)
+
+    # --------------------------------------------------------
+    # 7. VALIDATE
+    # --------------------------------------------------------
+
+    validate_index(chunks, embeddings, faiss_index)
+    end_time = time.time()
+    total_time = end_time - start_time
+
+    print()
+    print("=" * 70)
+    print("INDEXING COMPLETE")
+    print("=" * 70)
+
+    print()
+    print("Output files:")
+
+    print(f"  1. {FAISS_INDEX_PATH}")
+    print(f"  2. {CHUNK_META_PATH}")
+    print(f"  3. {BM25_PATH}")
+    print(f"Total time: {total_time:.2f} seconds")
+    print(f"Total time: {total_time / 60:.2f} minutes")
+
+    print()
+
+
+if __name__ == "__main__":
+    main()
