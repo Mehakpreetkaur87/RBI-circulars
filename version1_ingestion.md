@@ -23,47 +23,112 @@ The V1 engine addresses these challenges using a **multi-tiered, fault-tolerant,
 ## 🏗️ Architecture & Ingestion Flow
 
 The following diagram illustrates the complete end-to-end flow of the V1 scraping pipeline:
-
 ```mermaid
 flowchart TD
-    A["RBI Index Page<br/>(BS_CircularIndexDisplay.aspx)"] -->|1. Crawl Index Table| B["Index Metadata Collector<br/>(Ref No, Date, Dept, Subject, URL)"]
-    
-    B -->|2. HTTP Request with Delay| C["Fetch Circular Detail Page<br/>(Detail HTML)"]
-    
-    C -->|3. Scrape Detailed Metadata| D["Metadata Normalizer<br/>(Status, Department, Meant For)"]
-    
-    C -->|4. Primary Extraction Route| E{"Is HTML Body Valid?<br/>(len >= 200 chars)"}
-    
-    E -->|Yes (HTML First)| F["extract_body_from_html()<br/>- Decompose scripts/styles<br/>- Strip Portal Navigation<br/>- Parse HTML Tables to MD"]
-    
-    E -->|No (PDF Fallback)| G["Locate PDF Link on Detail Page"]
-    G -->|Download & Cache| H["pdfs_ingest_1_09_final/*.pdf"]
-    H --> I["extract_from_pdf()<br/>(pdfplumber + char bbox filtering)"]
-    I --> J{"Rule-based Table Poor?<br/>(pipes < 4 or spaces)"}
-    J -->|Yes| K["Gemini 2.5 Flash Vision Fallback<br/>(Render Page to PNG -> LLM Table MD)"]
-    J -->|No| L["Markdown Inline Tables"]
+
+    A["RBI Index Page<br/>BS_CircularIndexDisplay.aspx"]
+    B["Index Metadata Collector<br/>Ref No, Date, Dept, Subject, URL"]
+    C["Fetch Circular Detail Page<br/>Detail HTML"]
+    D["Metadata Normalizer<br/>Status, Department, Meant For"]
+
+    E{"Is HTML Body Valid?<br/>len >= 200 chars"}
+
+    F["extract_body_from_html()<br/>Decompose scripts and styles<br/>Strip Portal Navigation<br/>Parse HTML Tables to MD"]
+
+    G["Locate PDF Link on Detail Page"]
+    H["pdfs_ingest_1_09_final/*.pdf"]
+    I["extract_from_pdf()<br/>pdfplumber + char bbox filtering"]
+
+    J{"Rule-based Table Poor?<br/>pipes less than 4 or spaces"}
+
+    K["Gemini 2.5 Flash Vision Fallback<br/>Render Page to PNG<br/>LLM Table to Markdown"]
+
+    L["Markdown Inline Tables"]
+    M["Stitch Multi-page Tables"]
+
+    N["Content De-nesting and Deduplication<br/>keep_last_complete_circular()"]
+
+    O["Signatory Extraction Engine<br/>signatory_from_text()<br/>Bottom-up regex scanning"]
+
+    P["Regulatory Reference Linker<br/>Detect RBI/YYYY-YY/NNN pattern"]
+
+    Q["Build Final Markdown with YAML Frontmatter"]
+
+    R["Compute SHA-256 Content Hash"]
+
+    S["Tier-0 Quality Assurance Engine<br/>run_tier0_checks()"]
+
+    S1["Required Fields Check<br/>ref_no, date, subject, signatory"]
+    S2["Regex Format Check<br/>RBI reference number format"]
+    S3["Designation Check<br/>Known RBI Official Ranks"]
+    S4["Table Consistency Check<br/>Matching Column Counts"]
+
+    T["SQLite Database<br/>ingest_1_09_final.db"]
+    U["Markdown File Output<br/>output_1_09_final/{ref_no}.md"]
+
+
+    A -->|1. Crawl Index Table| B
+
+    B -->|2. HTTP Request with Delay| C
+
+    C -->|3. Scrape Detailed Metadata| D
+
+    C -->|4. Primary Extraction Route| E
+
+
+    E -->|YES - HTML FIRST| F
+
+    E -->|NO - PDF FALLBACK| G
+
+    G -->|Download and Cache| H
+
+    H --> I
+
+    I --> J
+
+    J -->|YES - POOR TABLE| K
+
+    J -->|NO - GOOD TABLE| L
+
     K --> L
-    L --> M["Stitch Multi-page Tables"]
-    
-    F --> N["Content De-nesting & Deduplication<br/>keep_last_complete_circular()"]
+
+    L --> M
+
+
+    F --> N
+
     M --> N
-    
-    N --> O["Signatory Extraction Engine<br/>signatory_from_text()<br/>(Bottom-up regex scanning)"]
-    
-    N --> P["Regulatory Reference Linker<br/>(Detect RBI/YYYY-YY/NNN pattern)"]
-    
-    O & P & D --> Q["Build Final Markdown with YAML Frontmatter"]
-    
-    Q --> R["Compute SHA-256 Content Hash"]
-    
-    R --> S["Tier-0 Quality Assurance Engine<br/>run_tier0_checks()"]
-    S -->|Required Fields Check| S1["ref_no, date, subject, signatory"]
-    S -->|Regex Format Check| S2["^RBI/\\d{4}-\\d{2}/\\d+$"]
-    S -->|Designation Check| S3["Known RBI Official Ranks"]
-    S -->|Table Consistency Check| S4["Matching Column Counts"]
-    
-    S -->|Status: verified / needs_review| T["SQLite Database<br/>ingest_1_09_final.db"]
-    Q --> U["Markdown File Output<br/>output_1_09_final/{ref_no}.md"]
+
+
+    N --> O
+
+    N --> P
+
+
+    O --> Q
+
+    P --> Q
+
+    D --> Q
+
+
+    Q --> R
+
+    R --> S
+
+
+    S -->|Required Fields Check| S1
+
+    S -->|Regex Format Check| S2
+
+    S -->|Designation Check| S3
+
+    S -->|Table Consistency Check| S4
+
+
+    S -->|Verified or Needs Review| T
+
+    Q --> U
 ```
 
 ---
